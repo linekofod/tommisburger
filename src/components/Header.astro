@@ -1,5 +1,7 @@
 ---
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import logo from "/public/logo.svg";
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+
+<a href="/"><Image src={logo} alt="Tommi's Burger Joint logo" /></a>

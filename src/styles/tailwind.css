@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
 @plugin '@tailwindcss/typography';
@@ -5,22 +6,117 @@
 
 
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  /* Font Family */
+  --font-roboto: "Roboto Condensed", sans-serif; 
+
+  /* Colors */
+  --color-black-950: #030303FF;
+  --color-black-900: #050505FF;
+  --color-black-800: #0A0A0AFF;
+  --color-black-700: #10100FFF;
+  --color-black-600: #171717FF;
+  --color-black-500: #1C1C1BFF;
+  --color-black-400: #4B4B49FF;
+  --color-black-300: #777773FF;
+  --color-black-200: #A5A5A2FF;
+  --color-black-100: #D2D2D0FF;
+  --color-black-50: #E8E8E8FF;
+  --color-neutrals-950: #1A1A1AFF;
+  --color-neutrals-900: #303030FF;
+  --color-neutrals-800: #616161FF;
+  --color-neutrals-700: #949494FF;
+  --color-neutrals-600: #C4C4C4FF;
+  --color-neutrals-500: #F5F5F5FF;
+  --color-neutrals-400: #F7F7F7FF;
+  --color-neutrals-300: #FAFAFAFF;
+  --color-neutrals-200: #FAFAFAFF;
+  --color-neutrals-100: #FCFCFCFF;
+  --color-neutrals-50: #FFFFFFFF;
+  --color-blue-950: #00080FFF;
+  --color-blue-900: #010F1EFF;
+  --color-blue-800: #031F3BFF;
+  --color-blue-700: #032E59FF;
+  --color-blue-600: #033D76FF;
+  --color-blue-500: #054D94FF;
+  --color-blue-400: #0870D9FF;
+  --color-blue-300: #2F94F8FF;
+  --color-blue-200: #75B8FAFF;
+  --color-blue-100: #B9DBFDFF;
+  --color-blue-50: #DCEDFEFF;
+
+  /* Font Sizes */
+  --text-display-headline1: clamp(3.750rem, 16vw, 14.375rem);
+  --text-headline2: clamp(1.875rem, 5vw, 2.5rem);
+  --text-headline3: clamp(1.250rem, 5vw, 1.875rem);
+  --text-headline4: clamp(1.125rem, 5vw, 1.500rem);
+  --text-body: clamp(0.750rem, 2vw, 1rem);
+  --text-body-xl: clamp(1.000rem, 2vw, 1.125rem);
+  --text-button: clamp(0.75rem, 2vw, 1.125rem);
+  --text-link: clamp(3.125rem, 5vw, 6.250rem);
+
+  /* Border */
+  --border-width-05: 0.5px;
+  --border-width-1: 1px;
+
+  /* Spacing */
+  --spacing-4xs: 4px;
+  --spacing-3xs: 8px;
+  --spacing-2xs: 12px;
+  --spacing-xs: 16px;
+  --spacing-s: 20px;
+  --spacing-sm: 26px;
+  --spacing-m: 32px;
+  --spacing-ml: 40px;
+  --spacing-lg: 48px;
+  --spacing-xl: 64px;
+  --spacing-2xl: 80px;
+  --spacing-3xl: 96px;
+  --spacing-4xl: 112px;
+  --spacing-5xl: 128px;
+  --spacing-6xl: 160px;
+  --spacing-7xl: 191px;
+  --spacing-8xl: 320px;
+  --spacing-9xl: 360px;
+  --spacing-10xl: 424px;
 }
 
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
 }
 
 @layer components{
+    h1, h2, h3, h4 {
+      font-family: var(--font-roboto);
+      color: var(--black-500);
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
 
+    h1 {
+      font-size: var(--text-display-headline1);
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: var(--text-headline2);
+      font-weight: bold;
+    }
+
+    h3 {
+      font-size: var(--text-headline3);
+      font-weight: 600;
+    }
+
+    h4 {
+      font-size: var(--text-headline4);
+      font-weight: 500;
+    }
+
+    p {
+      font-size: var(--text-body);
+      font-family: var(--font-roboto);
+      color: var(--black-500);
+    }
 }
+
 @layer utilities{
-  
 }
