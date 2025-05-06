@@ -21,17 +21,17 @@
   --color-black-200: #A5A5A2FF;
   --color-black-100: #D2D2D0FF;
   --color-black-50: #E8E8E8FF;
-  --color-neutrals-950: #1A1A1AFF;
-  --color-neutrals-900: #303030FF;
-  --color-neutrals-800: #616161FF;
-  --color-neutrals-700: #949494FF;
-  --color-neutrals-600: #C4C4C4FF;
-  --color-neutrals-500: #F5F5F5FF;
-  --color-neutrals-400: #F7F7F7FF;
-  --color-neutrals-300: #FAFAFAFF;
-  --color-neutrals-200: #FAFAFAFF;
-  --color-neutrals-100: #FCFCFCFF;
-  --color-neutrals-50: #FFFFFFFF;
+  --color-neutral-950: #1A1A1AFF;
+  --color-neutral-900: #303030FF;
+  --color-neutral-800: #616161FF;
+  --color-neutral-700: #949494FF;
+  --color-neutral-600: #C4C4C4FF;
+  --color-neutral-500: #F5F5F5FF;
+  --color-neutral-400: #F7F7F7FF;
+  --color-neutral-300: #FAFAFAFF;
+  --color-neutral-200: #FAFAFAFF;
+  --color-neutral-100: #FCFCFCFF;
+  --color-neutral-50: #FFFFFFFF;
   --color-blue-950: #00080FFF;
   --color-blue-900: #010F1EFF;
   --color-blue-800: #031F3BFF;
@@ -52,7 +52,7 @@
   --text-body: clamp(0.750rem, 2vw, 1rem);
   --text-body-xl: clamp(1.000rem, 2vw, 1.125rem);
   --text-button: clamp(0.75rem, 2vw, 1.125rem);
-  --text-link: clamp(3.125rem, 5vw, 6.250rem);
+  --text-link: clamp(2.25rem, 5vw, 6.250rem);
 
   /* Border */
   --border-width-05: 0.5px;

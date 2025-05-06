@@ -3,33 +3,27 @@
 const {
   href = "#",
   target = "_self",
-  variant = "navLink",
+  variant = "menuLink",
   size = "standard",
-  color = "beige",
+  color = "blue",
 } = Astro.props;
 
-const linkStyling = "font-light w-fit";
+const linkStyling = "";
 
 const variantClasses = {
-  navLink: "uppercase",
+  menuLink: "uppercase",
   textLink: "normal-case",
 };
 
 const sizeClasses = {
-  standard: `
-    text-link_lg px-3xs ease-in-out duration-200 
-    relative before:content-[''] before:block before:h-[1px] 
-    before:bg-beige-50 before:absolute before:left-0 before:bottom-0 
-    before:w-0 before:transition-all before:duration-300 
-    hover:before:w-full
-  `,
+  standard: "font-roboto text-link font-semibold hover:text-[#054D9499]",
   small: "text-link_s hover:font-regular",
   xsmall: "text-body_s md:text-body_lg hover:font-regular",
 };
 
 const colorClasses = {
-  beige: "text-beige-50",
-  grøn: "text-grøn-700",
+  blue: "text-blue-500",
+  black: "text-black-500",
 };
 ---
 
