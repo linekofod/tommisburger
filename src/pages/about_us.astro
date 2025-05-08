@@ -3,16 +3,15 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
 import about from "../assets/images/about_us.webp";
+import HeroDisplay from "../components/HeroDisplay.astro";
 ---
 
 <MainLayout title="About Us">
   <!-- HERO -->
-  <section>
-    <h1>About Us</h1>
-  </section>
+  <HeroDisplay height="h-8xl" h1="About Us" />
 
   <!-- TEKST SEKTION -->
-  <section class="grid grid-cols-2 gap-4xl m-5xl">
+  <section class="grid grid-cols-2 gap-4xl m-5xl mt-xl">
     <div class="content-center">
       <h2 class="text-blue-500 mb-sm">About Us</h2>
       <h4 class="mb-sm">Born in Reykjavík. Loved Worldwide.</h4>
@@ -28,7 +27,11 @@ import about from "../assets/images/about_us.webp";
     </div>
     <!-- BILLEDE -->
     <div class="">
-      <Image src={about} alt="" class="w-full h-full" />
+      <Image
+        src={about}
+        alt="picture of tables and chairs"
+        class="w-full h-full"
+      />
     </div>
   </section>
 
