@@ -2,10 +2,63 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
+import about from "../assets/images/about_us.webp";
 ---
 
 <MainLayout title="About Us">
+  <!-- HERO -->
   <section>
     <h1>About Us</h1>
+  </section>
+
+  <!-- TEKST SEKTION -->
+  <section class="grid grid-cols-2 gap-4xl m-5xl">
+    <div class="content-center">
+      <h2 class="text-blue-500 mb-sm">About Us</h2>
+      <h4 class="mb-sm">Born in Reykjavík. Loved Worldwide.</h4>
+      <p>
+        Tommi’s Burger Joint started back in 2004 by burger legend Tómas
+        Tómasson – aka Tommi – along with his sons and a couple of good friends.
+        The first spot opened by the harbor in downtown Reykjavík, and the vibe
+        caught on fast. No fuss, just quality burgers made right. <br />
+        Today, Tommi’s has grown from that little joint in Iceland to a full-on family
+        with locations in London, Berlin, Copenhagen and Rome – but the heart’s still
+        the same: good burgers, good people, and zero bullsh*t.
+      </p>
+    </div>
+    <!-- BILLEDE -->
+    <div class="">
+      <Image src={about} alt="" class="w-full h-full" />
+    </div>
+  </section>
+
+  <!-- MAP SEKTION -->
+  <section class="bg-black-500">
+    <section class="grid grid-cols-2 gap-4xl p-5xl">
+      <!-- grid 1 med integreret kort -->
+      <div></div>
+
+      <!-- grid 2 med tekst -->
+      <div>
+        <h2 class="text-neutral-50 mb-xs">Find us in Kødbyen</h2>
+        <h4 class="mb-xs text-neutral-50">
+          Burgers, Beers & GOOD Vibes in Vesterbro
+        </h4>
+        <p class="mb-xs text-neutral-50">
+          You’ll find us in the heart of Kødbyen – right where the meatpacking
+          magic happens. Swing by, grab a seat, and soak up the atmosphere.
+        </p>
+
+        <h4 class="mb-4xs text-neutral-50">Address</h4>
+        <p class="text-neutral-50">Høkerboderne 21-23</p>
+        <p class="text-neutral-50">1712 København V</p>
+        <p class="text-neutral-50 mb-ml">+45 33 31 34 34</p>
+
+        <h4 class="mb-4xs text-neutral-50">Opening Hours</h4>
+        <p class="text-neutral-50">Mon–Thu: 11:00–21:00</p>
+        <p class="text-neutral-50">Fri–Sat: 11:00–22:00</p>
+        <p class="text-neutral-50">Sun: 11:00–21:00</p>
+      </div>
+    </section>
   </section>
 </MainLayout>
