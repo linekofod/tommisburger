@@ -2,10 +2,22 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
+import banner from "../assets/images/tommi_hero.webp";
 ---
 
 <MainLayout title="Our Menu">
   <section>
-    <h1>Our Menu</h1>
+    <div class="relative">
+      <div class="h-[45vh] overflow-hidden">
+        <Image
+          src={banner}
+          alt=""
+          class="w-full h-full object-cover object-[100%_45%]"
+        />
+      </div>
+      <h1 class="absolute -bottom-xl left-[50%] translate-x-[-50%] w-full">
+        Our Menu
+      </h1>
+    </div>
   </section>
 </MainLayout>
