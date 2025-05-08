@@ -1,0 +1,36 @@
+---
+// Henter parametrene fra Astro.props
+const { height = "", h1 = "" } = Astro.props;
+
+import { Image } from "astro:assets";
+import banner from "../assets/images/tommi_hero.webp";
+---
+
+<div class="relative">
+  <!-- Højde på index: h-[calc(70vh-98px)] sm:h-[calc(100vh-98px)] -->
+  <!-- Højde på de andre sider: h-8xl -->
+  <div class={height}>
+    <Image
+      src={banner}
+      alt="Picture of two hands holding af juicy burger from Tommis Burger Joint"
+      class="w-full h-full object-cover object-[50%_45%]"
+    />
+  </div>
+  <h1
+    class="absolute bottom-0 left-[50%] translate-x-[-50%] w-full leading-[0.68] slideup"
+  >
+    {h1}
+  </h1>
+</div>
+
+<script>
+  // ANIMATIONER
+  import { inView, animate } from "motion";
+
+  //   InView animation
+  const slideup = document.querySelector(".slideup");
+
+  inView(slideup, () => {
+    slideup.classList.add("animate__animated", "animate__slideInUp");
+  });
+</script>

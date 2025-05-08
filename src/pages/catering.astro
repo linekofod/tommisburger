@@ -2,32 +2,34 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
+import HeroDisplay from "../components/HeroDisplay.astro";
 import { Image } from "astro:assets";
 ---
 
 <MainLayout title="Catering">
+  <HeroDisplay height="h-8xl" h1="Catering" />
   <section>
     <h1>Catering</h1>
     <div class="flex flex-col sm:flex-row gap-sm">
       <Card
         cardimage="/src/assets/images/pickup.svg"
         cardimagealt="Blue illustration of an arm in a window with a Tommi's Burger Joint takeaway bag"
-        headline3="Pick-Up"
-        headline4="Grab and Go"
+        h3="Pick-Up"
+        h4="Grab and Go"
         body="Swing by, pick up your feast, and bring the Tommi’s magic straight to your table. Quick, easy, and always delicious."
       />
       <Card
         cardimage="/src/assets/images/delivery.svg"
         cardimagealt="Blue illustration of a delivery truck from Tommi's Burger Joint"
-        headline3="Delivery"
-        headline4="Straight to Your Door"
+        h3="Delivery"
+        h4="Straight to Your Door"
         body="Craving burgers but not the trip? We’ll bring the goods to you – hot, juicy, and ready to eat."
       />
       <Card
         cardimage="/src/assets/images/setup.svg"
         cardimagealt="Blue illustration of a food tent setup from Tommi's Burger Joint"
-        headline3="Set-Up"
-        headline4="We’ll Handle Everything"
+        h3="Set-Up"
+        h4="We’ll Handle Everything"
         body="Throwing a party? We’ll set it all up, so you can kick back and enjoy killer burgers without lifting a finger."
       />
     </div>
