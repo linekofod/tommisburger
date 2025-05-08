@@ -86,7 +86,6 @@
 @layer components{
     h1, h2, h3, h4 {
       font-family: var(--font-roboto);
-      color: var(--black-500);
       text-transform: uppercase;
       line-height: 1.2;
     }
@@ -94,27 +93,32 @@
     h1 {
       font-size: var(--text-display-headline1);
       font-weight: bold;
+      color: var(--color-neutral-50);
+      text-align: center;
     }
 
     h2 {
       font-size: var(--text-headline2);
       font-weight: bold;
+      color: var(--color-black-500);
     }
 
     h3 {
       font-size: var(--text-headline3);
       font-weight: 600;
+      color: var(--color-black-500);
     }
 
     h4 {
       font-size: var(--text-headline4);
       font-weight: 500;
+      color: var(--color-black-500);
     }
 
     p {
       font-size: var(--text-body);
       font-family: var(--font-roboto);
-      color: var(--black-500);
+      color: var(--color-black-500);
     }
 }
 
