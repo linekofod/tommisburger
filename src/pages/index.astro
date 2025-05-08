@@ -3,34 +3,50 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
 import TommiHero from "../assets/images/tommi_hero.webp";
+import madpapir from "../assets/images/madpapir.webp";
 ---
 
 <MainLayout title="Tommi's Burger Joint">
-
   <section class="relative w-full h-screen">
-    <Image src={TommiHero} alt="Picture of two hands holding af juicy burger from Tommis Burger Joint" class="absolute inset-0 w-full h-full object-cover" />
+    <Image
+      src={TommiHero}
+      alt="Picture of two hands holding af juicy burger from Tommis Burger Joint"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
     <div class="absolute bottom-0 w-full flex justify-center">
       <h1>BORN HUNGRY</h1>
     </div>
   </section>
 
   <section class="bg-black-500">
-    <div class="container mx-auto grid md:grid-cols-2 pt-5xl m-1xl gap-1xl pb-5xl">
+    <div
+      class="container mx-auto grid md:grid-cols-2 pt-5xl m-1xl gap-1xl pb-5xl"
+    >
       <div>
         <h2 class="text-neutral-50">
-          WELCOME TO TOMMI’S BURGER JOINT<br/>
+          WELCOME TO TOMMI’S BURGER JOINT<br />
           – REAL BURGERS, NO BULLSH*T
         </h2>
       </div>
       <div class="max-w-[55ch]">
         <p class="text-neutral-50">
-          Since 1981, Tommi’s has been flipping honest, no-fuss burgers that hit just right. Fresh ingredients, juicy patties, old-school vibes – it’s all about simple food done damn well. No gimmicks, no shortcuts – just the kind of burgers you crave. Come hungry, leave happy.
+          Since 1981, Tommi’s has been flipping honest, no-fuss burgers that hit
+          just right. Fresh ingredients, juicy patties, old-school vibes – it’s
+          all about simple food done damn well. No gimmicks, no shortcuts – just
+          the kind of burgers you crave. Come hungry, leave happy.
         </p>
       </div>
     </div>
   </section>
 
+  <section></section>
+  <!-- ------------------------------ -->
+
+  <!-- CATERING -->
+
   <section>
-    
+    <div class="h-screen w-full">
+      <Image src={madpapir} alt="madpapir" class="object-cover" />
+    </div>
   </section>
 </MainLayout>
