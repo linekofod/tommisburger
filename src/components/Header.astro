@@ -7,14 +7,15 @@ import logo from "/public/logo.svg";
 
 <div x-data="{ showmenu: false }">
   <div class="flex justify-between py-s px-m bg-neutral-50">
-    <!-- Logo -->
+    <!-- LOGO -->
     <a class="self-center" href="/"
       ><Image src={logo} alt="Tommi's Burger Joint logo" /></a
     >
     <div class="flex gap-sm">
-      <!-- CTA button -->
+      <!-- CTA -->
       <div class="self-center hidden sm:block"><Button>Order Now</Button></div>
-      <!-- Burgermenu -->
+
+      <!-- BURGERMENU -->
       <button
         id="burgermenu"
         class="z-50 cursor-pointer xl:block object-contain w-[46px] h-[47px] sm:w-[57px] sm:h-[58px]"
@@ -97,7 +98,7 @@ import logo from "/public/logo.svg";
       </button>
     </div>
   </div>
-  <!-- Navigation -->
+  <!-- NAVIGATION -->
   <nav
     id="navmenu"
     class="xl:block flex flex-col bg-neutral-50 h-[calc(100vh-96px)] w-full mt-xl sm:mt-2xl items-center"
@@ -112,7 +113,7 @@ import logo from "/public/logo.svg";
         <Link href="/catering">Catering</Link>
         <Link href="/about_us">About Us</Link>
       </div>
-      <!-- CTA button -->
+      <!-- CTA -->
       <div class="self-center block sm:hidden"><Button>Order Now</Button></div>
     </div>
   </nav>

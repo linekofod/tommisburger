@@ -1,6 +1,83 @@
 ---
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import display from "../assets/images/footer_display.svg";
+import facebook from "../assets/images/facebook.svg";
+import instagram from "../assets/images/instagram.svg";
+import mail from "../assets/images/mail.svg";
+import smiley from "../assets/images/smiley.svg";
+import logo from "/public/logo.svg";
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
+
+<div class="p-m sticky bottom-0 bg-neutral-50">
+  <!-- DISPLAY TEXT -->
+  <Image src={display} alt="Big display text saying 'Born Hungry'" />
+
+  <div class="flex justify-between mt-ml">
+    <!-- FIND US -->
+    <div class="flex flex-col gap-2xs">
+      <h3>Find us</h3>
+      <div class="flex flex-col gap-3xs">
+        <h4>Tommi's Burger Joint</h4>
+        <div class="flex flex-col gap-4xs">
+          <p>Høkerboderne 21–23</p>
+          <p>1712 København V</p>
+          <p>+45 33 31 34 34</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPENING HOURS -->
+    <div class="flex flex-col gap-2xs">
+      <h3>Opening Hours</h3>
+      <div class="flex flex-col gap-4xs">
+        <p>Mon–Thu: 11:00–21:00</p>
+        <p>Fri–Sat: 11:00–22:00</p>
+        <p>Sun: 11:00–21:00</p>
+      </div>
+    </div>
+
+    <!-- GENERAL -->
+    <div class="flex flex-col gap-2xs">
+      <h3>General</h3>
+      <div class="flex flex-col gap-4xs">
+        <Link variant="textLink" size="small" color="black" href="/our_menu"
+          >Our Menu</Link
+        >
+        <Link variant="textLink" size="small" color="black" href="/catering"
+          >Catering</Link
+        >
+        <Link variant="textLink" size="small" color="black" href="/about_us"
+          >About Us</Link
+        >
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-m">
+      <!-- CONTACT US -->
+      <div class="flex flex-col gap-2xs">
+        <h3>Contact Us</h3>
+        <div class="flex flex-row items-center gap-3xs">
+          <!-- Facebook -->
+          <Image src={facebook} alt="Facebook icon" />
+          <!-- Instagram -->
+          <Image src={instagram} alt="Instagram icon" />
+          <!-- Mail -->
+          <Image src={mail} alt="Mail icon" />
+        </div>
+      </div>
+
+      <!-- SMILEY RAPPORT -->
+      <div class="flex flex-col gap-2xs">
+        <h3>Smiley Rapport</h3>
+        <div class="flex flex-row items-center gap-3xs">
+          <!-- Smiley -->
+          <Image src={smiley} alt="Smiley rapport icon" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Logo -->
+    <Image src={logo} width="220px" alt="Tommi's Burger Joint logo" />
+  </div>
 </div>
-  
