@@ -1,5 +1,28 @@
 ---
+// Henter parametrene fra Astro.props
+const {
+  cardimage = "",
+  cardimagealt = "",
+  headline3 = "",
+  headline4 = "",
+  body = "",
+} = Astro.props;
 
+import Button from "./Button.astro";
 ---
 
-<div></div>
+<div
+  class="p-s border-1 border-blue-500 w-fit h-[498px] flex flex-col justify-between"
+>
+  <img src={cardimage} class="w-fit h-[226px]" alt={cardimagealt} />
+  <div class="flex flex-col">
+    <div class="flex flex-col gap-2xs mb-m">
+      <div class="flex flex-col gap-4xs">
+        <h3>{headline3}</h3>
+        <h4>{headline4}</h4>
+      </div>
+      <p class="max-w-[50ch]">{body}</p>
+    </div>
+  </div>
+  <div class="mt-auto"><Button>Order now</Button></div>
+</div>
