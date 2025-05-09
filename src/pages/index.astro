@@ -5,30 +5,21 @@ import { Image } from "astro:assets";
 import TommiHero from "../assets/images/tommi_hero.webp";
 import BurgerStack from "../assets/images/burger_stack.webp";
 import madpapir from "../assets/images/madpapir.webp";
+import HeroDisplay from "../components/HeroDisplay.astro";
 ---
 
 <MainLayout title="Tommi's Burger Joint">
-  <section class="relative w-full h-screen">
-    <Image
-      src={TommiHero}
-      alt="Picture of two hands holding af juicy burger from Tommis Burger Joint"
-      class="absolute inset-0 w-full h-full object-cover"
-    />
-    <div class="absolute bottom-0 w-full flex justify-center">
-      <h1>BORN HUNGRY</h1>
-    </div>
-  </section>
+  <HeroDisplay
+    height="h-[calc(70vh-98px)] sm:h-[calc(100vh-98px)]"
+    h1="BORN HUNGRY"
+  />
 
   <section class="bg-black-500">
-    <div
-      class="container mx-auto grid md:grid-cols-2 pt-5xl m-1xl gap-1xl pb-5xl"
-    >
-      <div>
-        <h2 class="text-neutral-50">
-          WELCOME TO TOMMI’S BURGER JOINT<br />
-          – REAL BURGERS, NO BULLSH*T
-        </h2>
-      </div>
+    <div class="gap-xl container mx-auto grid md:grid-cols-2 pt-5xl pb-5xl">
+      <h2 class="text-neutral-50">
+        WE ARE TOMMI’S BURGER JOINT<br />
+        – REAL BURGERS, NO BULLSH*T
+      </h2>
       <div class="max-w-[55ch]">
         <p class="text-neutral-50">
           Since 1981, Tommi’s has been flipping honest, no-fuss burgers that hit
@@ -39,6 +30,7 @@ import madpapir from "../assets/images/madpapir.webp";
       </div>
     </div>
   </section>
+  <!--- Mathilde arbejder ovenobver-->
 
   <section class="grid grid-cols-2 gap-4xl m-5xl">
     <div class="content-center">
@@ -47,15 +39,23 @@ import madpapir from "../assets/images/madpapir.webp";
         No Rules.<br />
         Just Burgers.
       </h2>
-      <p>
-        Our menu is all about juicy burgers, crispy fries, and cold drinks –
-        nothing fancy, just damn good food made with love. No need to book a
-        table – just roll up, grab a seat, and dig in. <br />
-        Want to stay in your sweatpants? We get it. Order takeaway and enjoy Tommi’s
-        from your couch. However you want it, we’ve got you.
-      </p>
+      <div class="flex flex-col gap-xs">
+        <p>
+          Our menu is all about juicy burgers, crispy fries, and cold drinks –
+          nothing fancy, just damn good food made with love. No need to book a
+          table – just roll up, grab a seat, and dig in.
+        </p>
+        <p>
+          Want to stay in your sweatpants? We get it. Order takeaway and enjoy
+          Tommi’s from your couch. However you want it, we’ve got you.
+        </p>
+      </div>
+      <div class="flex mt-m gap-xs">
+        <Button>OUR MENU</Button>
+        <Button variant="secondary">ORDER NOW</Button>
+      </div>
     </div>
-    <!-- BILLEDE -->
+
     <div class="">
       <Image
         src={BurgerStack}
@@ -64,13 +64,20 @@ import madpapir from "../assets/images/madpapir.webp";
       />
     </div>
   </section>
-  <!-- ------------------------------ -->
 
   <!-- CATERING -->
 
   <section>
-    <div class="h-screen w-full">
+    <div class="h-screen w-full overflow-hidden">
       <Image src={madpapir} alt="madpapir" class="object-cover" />
     </div>
+  </section>
+
+  <!-- SPOTIFY PLAYLISTE -->
+
+  <section class="bg-black-500 text-center">
+    <section class="p-5xl">
+      <h2 class="text-neutral-50">Listen to the Sound of Tommi’s</h2>
+    </section>
   </section>
 </MainLayout>
