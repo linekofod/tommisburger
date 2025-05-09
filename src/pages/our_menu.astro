@@ -1,11 +1,446 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
 import HeroDisplay from "../components/HeroDisplay.astro";
 import { Image } from "astro:assets";
 ---
 
 <MainLayout title="Our Menu">
   <HeroDisplay height="h-8xl" h1="Our Menu" />
-  <section></section>
+  <section class="grid grid-cols-1 lg:grid-cols-[200px_1fr] mx-s lg:mx-ml">
+    <!-- MENU NAVIGATION -->
+    <nav class="hidden lg:flex flex-col gap-3xs sticky top-xl self-start mt-xl">
+      <Link color="black" size="medium" href="#combos">Combos</Link>
+      <Link color="black" size="medium" href="#burgers">Burgers</Link>
+      <Link color="black" size="medium" href="#sides">Sides</Link>
+      <Link color="black" size="medium" href="#drinks">Drinks</Link>
+      <Link color="black" size="medium" href="#desserts">Desserts</Link>
+    </nav>
+
+    <!-- MENUS -->
+    <div class="flex flex-col">
+      <!-- COMBOS -->
+      <div class="flex flex-col gap-ml pt-xl" id="combos">
+        <!-- Combos header -->
+        <div class="flex flex-col gap-ml">
+          <div class="flex flex-col gap-s">
+            <div class="flex flex-col gap-2xs">
+              <h2 class="text-blue-500">Combos</h2>
+              <h3>Any Burger, Fries, and a Drink - Your Way</h3>
+            </div>
+            <div class="flex flex-col gap-2xs">
+              <p>
+                Mix it up your way: grab any burger you want, throw in some
+                crispy fries and your favorite drink. Simple, tasty, and all
+                yours. <br /> Our burger patties are 150 grams of high quality beef.
+                <br /> Free soda refill with all inhouse combos.
+              </p>
+              <div class="flex gap-sm">
+                <p>VG - Vegan</p>
+                <p>LF - Lactose-free</p>
+                <p>V - Veggie</p>
+              </div>
+            </div>
+          </div>
+          <span class="w-full h-[1px] bg-black-500 block"></span>
+        </div>
+        <!-- Combos -->
+        <div class="flex flex-col sm:flex-row gap-2xl">
+          <div class="flex flex-col gap-2xl w-full">
+            <!-- Cheese combo -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Cheese combo</h4>
+              <p>
+                Classic beef patty, cheddar cheese, lettuce, tomato, onion,
+                pickles, and Tommi's mayo. <br /> Served with crispy fries and a
+                drink of your choice.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">150 DKK</p>
+            </div>
+            <!-- Bacon cheese combo -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Bacon cheese combo</h4>
+              <p>
+                Beef patty, crispy bacon, cheddar cheese, lettuce, tomato,
+                onion, pickles, and Tommi's mayo. <br /> Served with crispy fries
+                and a drink of your choice.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">165 DKK</p>
+            </div>
+            <!-- Veggie combo -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Veggie combo - V</h4>
+              <p>
+                Grilled veggie patty, cheddar cheese, lettuce, tomato, onion,
+                pickles, and Tommi's mayo. <br /> Served with crispy fries and a
+                drink of your choice.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">150 DKK</p>
+            </div>
+            <!-- Kids combo -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Kids combo</h4>
+              <p>
+                Small beef patty, cheddar cheese, ketchup, and pickles. <br /> Served
+                with fries and a small drink.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">110 DKK</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-2xl w-full">
+            <!-- Vegan combo -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Vegan combo - VG, LF</h4>
+              <p>
+                Plant-based patty, vegan cheese, lettuce, tomato, onion,
+                pickles, and vegan mayo. <br /> Served with crispy fries and a drink
+                of your choice.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">150 DKK</p>
+            </div>
+            <!-- Spicy bbq combo -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Spicy bbq combo</h4>
+              <p>
+                Beef patty, spicy BBQ sauce, cheddar cheese, jalapeños, lettuce,
+                tomato, and crispy onions. <br /> Served with crispy fries and a
+                drink of your choice.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">165 DKK</p>
+            </div>
+            <!-- The pioneer combo -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>The pioneer combo</h4>
+              <p>
+                Double beef patties, cheddar cheese, bacon, pickles, onion,
+                lettuce, tomato, and smoky mayo. <br /> Served with crispy fries
+                and a drink of your choice.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">165 DKK</p>
+            </div>
+            <!-- Family combo -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Family combo</h4>
+              <p>
+                2 cheeseburgers, 2 kids burgers, 4 fries, 4 sodas, and 2 dips.
+                <br /> Perfect for sharing - and yes, free soda refills when you
+                dine in.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">420 DKK</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BURGERS -->
+      <div class="flex flex-col gap-ml pt-xl" id="burgers">
+        <!-- Burgers header -->
+        <div class="flex flex-col gap-ml">
+          <div class="flex flex-col gap-s">
+            <div class="flex flex-col gap-2xs">
+              <h2 class="text-blue-500">Burgers</h2>
+              <h3>Fresh, Juicy, Legendary</h3>
+            </div>
+            <div class="flex flex-col gap-2xs">
+              <p>
+                No tricks, no fuss - just juicy, messy, old-school burgers made
+                with fresh ingredients and plenty of love. Pick your favorite
+                and dig in. <br /> Our burger patties are 150 grams of high quality
+                beef, and cooked medium.
+              </p>
+              <div class="flex gap-sm">
+                <p>VG - Vegan</p>
+                <p>LF - Lactose-free</p>
+                <p>V - Veggie</p>
+              </div>
+            </div>
+          </div>
+          <span class="w-full h-[1px] bg-black-500 block"></span>
+        </div>
+        <!-- Burgers -->
+        <div class="flex flex-col sm:flex-row gap-2xl">
+          <div class="flex flex-col gap-2xl w-full">
+            <!-- Cheese burger -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Cheese burger</h4>
+              <p>
+                Classic beef patty, cheddar cheese, lettuce, tomato, onion,
+                pickles, and Tommi's mayo.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">110 DKK</p>
+            </div>
+            <!-- Bacon cheese burger -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Bacon cheese burger</h4>
+              <p>
+                Beef patty, crispy bacon, cheddar cheese, lettuce, tomato,
+                onion, pickles, and Tommi's mayo.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">125 DKK</p>
+            </div>
+            <!-- Veggie burger -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Veggie burger - V</h4>
+              <p>
+                Grilled veggie patty, cheddar cheese, lettuce, tomato, onion,
+                pickles, and Tommi's mayo.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">110 DKK</p>
+            </div>
+            <!-- Kids burger -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Kids burger</h4>
+              <p>Small beef patty, cheddar cheese, ketchup, and pickles.</p>
+              <p class="text-body-xl absolute top-0 right-0">75 DKK</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-2xl w-full">
+            <!-- Vegan burger -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Vegan burger - VG, LF</h4>
+              <p>
+                Plant-based patty, vegan cheese, lettuce, tomato, onion,
+                pickles, and vegan mayo.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">110 DKK</p>
+            </div>
+            <!-- Spicy bbq burger -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Spicy bbq burger</h4>
+              <p>
+                Beef patty, spicy BBQ sauce, cheddar cheese, jalapeños, lettuce,
+                tomato, and crispy onions.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">125 DKK</p>
+            </div>
+            <!-- The pioneer burger -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>The pioneer burger</h4>
+              <p>
+                Double beef patties, cheddar cheese, bacon, pickles, onion,
+                lettuce, tomato, and smoky mayo.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">125 DKK</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDES -->
+      <div class="flex flex-col gap-2xl pt-xl" id="sides">
+        <div class="flex flex-col gap-ml">
+          <!-- Sides header -->
+          <div class="flex flex-col gap-ml">
+            <div class="flex flex-col gap-s">
+              <div class="flex flex-col gap-2xs">
+                <h2 class="text-blue-500">Sides</h2>
+                <h3>Crispy Fries</h3>
+              </div>
+              <p>
+                Crispy, golden, and salty as hell. Our fries are the real deal -
+                the perfect side for any burger or just on their own.
+              </p>
+            </div>
+            <span class="w-full h-[1px] bg-black-500 block"></span>
+          </div>
+          <!-- Sides -->
+          <div class="flex flex-col sm:flex-row gap-2xl w-full">
+            <!-- Classic fries -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Classic fries</h4>
+              <p>
+                Crispy golden fries made from fresh potatoes, lightly seasoned.
+              </p>
+              <p class="text-body-s absolute top-0 right-0">Small/Large</p>
+              <p class="text-body-xl absolute top-s right-0">40/60 DKK</p>
+            </div>
+            <!-- Sweet potato fries -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Sweet potato fries</h4>
+              <p>Sweet and crispy sweet potato fries, lightly seasoned.</p>
+              <p class="text-body-s absolute top-0 right-0">Small/Large</p>
+              <p class="text-body-xl absolute top-s right-0">60/80 DKK</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIPS -->
+      <div class="flex flex-col gap-ml pt-xl">
+        <!-- Dips header -->
+        <div class="flex flex-col gap-ml">
+          <div class="flex flex-col gap-s">
+            <div class="flex flex-col gap-2xs">
+              <h3>Delicious dips</h3>
+            </div>
+            <div class="flex flex-col gap-2xs">
+              <p>
+                No fries without dips. Pick your favorite - from classic ketchup
+                to spicy mayo. Go crazy, double dip, we won't judge.
+              </p>
+              <div class="flex gap-sm">
+                <p>VG - Vegan</p>
+                <p>LF - Lactose-free</p>
+                <p>V - Veggie</p>
+              </div>
+            </div>
+          </div>
+          <span class="w-full h-[1px] bg-black-500 block"></span>
+        </div>
+        <!-- Dips -->
+        <div class="flex flex-col sm:flex-row gap-2xl">
+          <div class="flex flex-col gap-2xl w-full">
+            <!-- Tommi’s cocktail -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Tommi's cocktail - LF</h4>
+              <p>
+                Mayo, ketchup, mustard, Worcestershire sauce, lemon, salt,
+                pepper, a touch of chili.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">15 DKK</p>
+            </div>
+            <!-- Vegan mayo -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Vegan mayo - VG, LF</h4>
+              <p>
+                Plant-based oil, soy or pea protein, vinegar, mustard, lemon,
+                salt.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">15 DKK</p>
+            </div>
+            <!-- Béarnaise -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Béarnaise</h4>
+              <p>
+                Butter, egg yolks, tarragon, white wine vinegar, shallots,
+                pepper.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">15 DKK</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-2xl w-full">
+            <!-- Tommi’s mayo -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Tommi's mayo - LF</h4>
+              <p>Eggs, oil, vinegar, mustard, lemon, salt.</p>
+              <p class="text-body-xl absolute top-0 right-0">15 DKK</p>
+            </div>
+            <!-- Chili mayo -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Chili mayo - LF</h4>
+              <p>Mayo, fresh or smoked chili, lemon, salt, pepper.</p>
+              <p class="text-body-xl absolute top-0 right-0">15 DKK</p>
+            </div>
+            <!-- Spicy bbq -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Spicy bbq - LF</h4>
+              <p>
+                Tomato paste, brown sugar, vinegar, smoked paprika, garlic,
+                chili, spices.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">15 DKK</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DRINKS -->
+      <div class="flex flex-col gap-ml pt-xl" id="drinks">
+        <!-- Drinks header -->
+        <div class="flex flex-col gap-ml">
+          <div class="flex flex-col gap-s">
+            <div class="flex flex-col gap-2xs">
+              <h2 class="text-blue-500">Drinks</h2>
+              <h3>Drinks for Every Craving</h3>
+            </div>
+            <div class="flex flex-col gap-2xs">
+              <p>
+                Burgers taste better with something cold on the side. Grab a
+                soda, a beer, or whatever keeps you chill. <br /> Free refills on
+                sodas when you dine in.
+              </p>
+            </div>
+          </div>
+          <span class="w-full h-[1px] bg-black-500 block"></span>
+        </div>
+        <!-- Drinks -->
+        <div class="flex flex-col sm:flex-row gap-2xl">
+          <div class="flex flex-col gap-2xl w-full">
+            <!-- Sodas -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Sodas</h4>
+              <p>Coca Cola, Cola Zero, Orange, Carlsberg Sport, Ginger Ale</p>
+              <p class="text-body-xl absolute top-0 right-0">25 DKK</p>
+            </div>
+            <!-- Water -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Water</h4>
+              <p>Still, Sparkling</p>
+              <p class="text-body-xl absolute top-0 right-0">25 DKK</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-2xl w-full">
+            <!-- Beers -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Beers</h4>
+              <p>Tuborg Classic, Carlsberg, Grimbergen, Blanc 1664</p>
+              <p class="text-body-s absolute top-0 right-0">25cl/50cl</p>
+              <p class="text-body-xl absolute top-s right-0">50/70 DKK</p>
+            </div>
+            <!-- Juice -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Juice</h4>
+              <p>Orange, Apple</p>
+              <p class="text-body-xl absolute top-0 right-0">25 DKK</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESSERTS -->
+      <div class="flex flex-col gap-ml pt-xl" id="desserts">
+        <!-- Desserts header -->
+        <div class="flex flex-col gap-ml">
+          <div class="flex flex-col gap-s">
+            <div class="flex flex-col gap-2xs">
+              <h2 class="text-blue-500">Desserts</h2>
+              <h3>Sweet Endings Done Right</h3>
+            </div>
+            <div class="flex flex-col gap-2xs">
+              <p>
+                Round off your burger feast with a thick milkshake or our killer
+                ice cream sandwich. Because no good meal ends without a little
+                something sweet.
+              </p>
+            </div>
+          </div>
+          <span class="w-full h-[1px] bg-black-500 block"></span>
+        </div>
+        <!-- Desserts -->
+        <div class="flex flex-row gap-2xl">
+          <div class="flex flex-col sm:flex-row gap-2xl w-full">
+            <!-- Milkshakes -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Milkshakes</h4>
+              <p>Vanilla, Strawberry, Chocolate, Caramel</p>
+              <p class="text-body-xl absolute top-0 right-0">60 DKK</p>
+            </div>
+            <!-- Tommi’s ice sandwich -->
+            <div class="flex flex-col gap-3xs relative w-full">
+              <h4>Tommi's ice sandwich</h4>
+              <p>
+                Soft-baked cookies, creamy vanilla ice cream, chocolate chips.
+              </p>
+              <p class="text-body-xl absolute top-0 right-0">50 DKK</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </MainLayout>
