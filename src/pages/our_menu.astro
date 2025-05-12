@@ -10,7 +10,10 @@ import { Image } from "astro:assets";
   <HeroDisplay height="h-8xl" h1="Our Menu" />
   <section class="grid grid-cols-1 lg:grid-cols-[200px_1fr] mx-s lg:mx-ml">
     <!-- MENU NAVIGATION -->
-    <nav class="hidden lg:flex flex-col gap-3xs sticky top-xl self-start mt-xl">
+    <nav
+      x-data="scrollSpy()"
+      class="hidden lg:flex flex-col gap-3xs sticky top-xl self-start mt-xl"
+    >
       <Link color="black" size="medium" href="#combos">Combos</Link>
       <Link color="black" size="medium" href="#burgers">Burgers</Link>
       <Link color="black" size="medium" href="#sides">Sides</Link>
@@ -21,9 +24,12 @@ import { Image } from "astro:assets";
     <!-- MENUS -->
     <div class="flex flex-col">
       <!-- COMBOS -->
-      <div class="flex flex-col gap-ml pt-xl" id="combos">
+      <div
+        class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl inviewmenulinks"
+        id="combos"
+      >
         <!-- Combos header -->
-        <div class="flex flex-col gap-ml">
+        <div class="flex flex-col gap-m sm:gap-ml">
           <div class="flex flex-col gap-s">
             <div class="flex flex-col gap-2xs">
               <h2 class="text-blue-500">Combos</h2>
@@ -46,8 +52,8 @@ import { Image } from "astro:assets";
           <span class="w-full h-[1px] bg-black-500 block"></span>
         </div>
         <!-- Combos -->
-        <div class="flex flex-col sm:flex-row gap-2xl">
-          <div class="flex flex-col gap-2xl w-full">
+        <div class="flex flex-col sm:flex-row gap-ml sm:gap-xl">
+          <div class="flex flex-col gap-ml sm:gap-xl w-full">
             <!-- Cheese combo -->
             <div class="flex flex-col gap-3xs relative w-full">
               <h4>Cheese combo</h4>
@@ -89,7 +95,7 @@ import { Image } from "astro:assets";
             </div>
           </div>
 
-          <div class="flex flex-col gap-2xl w-full">
+          <div class="flex flex-col gap-ml sm:gap-xl w-full">
             <!-- Vegan combo -->
             <div class="flex flex-col gap-3xs relative w-full">
               <h4>Vegan combo - VG, LF</h4>
@@ -135,9 +141,9 @@ import { Image } from "astro:assets";
       </div>
 
       <!-- BURGERS -->
-      <div class="flex flex-col gap-ml pt-xl" id="burgers">
+      <div class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl" id="burgers">
         <!-- Burgers header -->
-        <div class="flex flex-col gap-ml">
+        <div class="flex flex-col gap-m sm:gap-ml">
           <div class="flex flex-col gap-s">
             <div class="flex flex-col gap-2xs">
               <h2 class="text-blue-500">Burgers</h2>
@@ -160,8 +166,8 @@ import { Image } from "astro:assets";
           <span class="w-full h-[1px] bg-black-500 block"></span>
         </div>
         <!-- Burgers -->
-        <div class="flex flex-col sm:flex-row gap-2xl">
-          <div class="flex flex-col gap-2xl w-full">
+        <div class="flex flex-col sm:flex-row gap-ml sm:gap-xl">
+          <div class="flex flex-col gap-ml sm:gap-xl w-full">
             <!-- Cheese burger -->
             <div class="flex flex-col gap-3xs relative w-full">
               <h4>Cheese burger</h4>
@@ -197,7 +203,7 @@ import { Image } from "astro:assets";
             </div>
           </div>
 
-          <div class="flex flex-col gap-2xl w-full">
+          <div class="flex flex-col gap-ml sm:gap-xl w-full">
             <!-- Vegan burger -->
             <div class="flex flex-col gap-3xs relative w-full">
               <h4>Vegan burger - VG, LF</h4>
@@ -230,10 +236,10 @@ import { Image } from "astro:assets";
       </div>
 
       <!-- SIDES -->
-      <div class="flex flex-col gap-2xl pt-xl" id="sides">
+      <div class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl" id="sides">
         <div class="flex flex-col gap-ml">
           <!-- Sides header -->
-          <div class="flex flex-col gap-ml">
+          <div class="flex flex-col gap-m sm:gap-ml">
             <div class="flex flex-col gap-s">
               <div class="flex flex-col gap-2xs">
                 <h2 class="text-blue-500">Sides</h2>
@@ -247,7 +253,7 @@ import { Image } from "astro:assets";
             <span class="w-full h-[1px] bg-black-500 block"></span>
           </div>
           <!-- Sides -->
-          <div class="flex flex-col sm:flex-row gap-2xl w-full">
+          <div class="flex flex-col sm:flex-row gap-ml sm:gap-xl w-full">
             <!-- Classic fries -->
             <div class="flex flex-col gap-3xs relative w-full">
               <h4>Classic fries</h4>
@@ -255,23 +261,27 @@ import { Image } from "astro:assets";
                 Crispy golden fries made from fresh potatoes, lightly seasoned.
               </p>
               <p class="text-body-s absolute top-0 right-0">Small/Large</p>
-              <p class="text-body-xl absolute top-s right-0">40/60 DKK</p>
+              <p class="text-body-xl absolute top-2xs sm:top-xs right-0">
+                40/60 DKK
+              </p>
             </div>
             <!-- Sweet potato fries -->
             <div class="flex flex-col gap-3xs relative w-full">
               <h4>Sweet potato fries</h4>
               <p>Sweet and crispy sweet potato fries, lightly seasoned.</p>
               <p class="text-body-s absolute top-0 right-0">Small/Large</p>
-              <p class="text-body-xl absolute top-s right-0">60/80 DKK</p>
+              <p class="text-body-xl absolute top-2xs sm:top-xs right-0">
+                60/80 DKK
+              </p>
             </div>
           </div>
         </div>
       </div>
 
       <!-- DIPS -->
-      <div class="flex flex-col gap-ml pt-xl">
+      <div class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl">
         <!-- Dips header -->
-        <div class="flex flex-col gap-ml">
+        <div class="flex flex-col gap-m sm:gap-ml">
           <div class="flex flex-col gap-s">
             <div class="flex flex-col gap-2xs">
               <h3>Delicious dips</h3>
@@ -291,8 +301,8 @@ import { Image } from "astro:assets";
           <span class="w-full h-[1px] bg-black-500 block"></span>
         </div>
         <!-- Dips -->
-        <div class="flex flex-col sm:flex-row gap-2xl">
-          <div class="flex flex-col gap-2xl w-full">
+        <div class="flex flex-col sm:flex-row gap-ml sm:gap-xl">
+          <div class="flex flex-col gap-ml sm:gap-xl w-full">
             <!-- Tommi’s cocktail -->
             <div class="flex flex-col gap-3xs relative w-full">
               <h4>Tommi's cocktail - LF</h4>
@@ -322,7 +332,7 @@ import { Image } from "astro:assets";
             </div>
           </div>
 
-          <div class="flex flex-col gap-2xl w-full">
+          <div class="flex flex-col gap-ml sm:gap-xl w-full">
             <!-- Tommi’s mayo -->
             <div class="flex flex-col gap-3xs relative w-full">
               <h4>Tommi's mayo - LF</h4>
@@ -349,9 +359,9 @@ import { Image } from "astro:assets";
       </div>
 
       <!-- DRINKS -->
-      <div class="flex flex-col gap-ml pt-xl" id="drinks">
+      <div class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl" id="drinks">
         <!-- Drinks header -->
-        <div class="flex flex-col gap-ml">
+        <div class="flex flex-col gap-m sm:gap-ml">
           <div class="flex flex-col gap-s">
             <div class="flex flex-col gap-2xs">
               <h2 class="text-blue-500">Drinks</h2>
@@ -368,8 +378,8 @@ import { Image } from "astro:assets";
           <span class="w-full h-[1px] bg-black-500 block"></span>
         </div>
         <!-- Drinks -->
-        <div class="flex flex-col sm:flex-row gap-2xl">
-          <div class="flex flex-col gap-2xl w-full">
+        <div class="flex flex-col sm:flex-row gap-ml sm:gap-xl">
+          <div class="flex flex-col gap-ml sm:gap-xl w-full">
             <!-- Sodas -->
             <div class="flex flex-col gap-3xs relative w-full">
               <h4>Sodas</h4>
@@ -384,13 +394,15 @@ import { Image } from "astro:assets";
             </div>
           </div>
 
-          <div class="flex flex-col gap-2xl w-full">
+          <div class="flex flex-col gap-ml sm:gap-xl w-full">
             <!-- Beers -->
             <div class="flex flex-col gap-3xs relative w-full">
               <h4>Beers</h4>
               <p>Tuborg Classic, Carlsberg, Grimbergen, Blanc 1664</p>
               <p class="text-body-s absolute top-0 right-0">25cl/50cl</p>
-              <p class="text-body-xl absolute top-s right-0">50/70 DKK</p>
+              <p class="text-body-xl absolute top-2xs sm:top-xs right-0">
+                50/70 DKK
+              </p>
             </div>
             <!-- Juice -->
             <div class="flex flex-col gap-3xs relative w-full">
@@ -403,9 +415,9 @@ import { Image } from "astro:assets";
       </div>
 
       <!-- DESSERTS -->
-      <div class="flex flex-col gap-ml pt-xl" id="desserts">
+      <div class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl" id="desserts">
         <!-- Desserts header -->
-        <div class="flex flex-col gap-ml">
+        <div class="flex flex-col gap-m sm:gap-ml">
           <div class="flex flex-col gap-s">
             <div class="flex flex-col gap-2xs">
               <h2 class="text-blue-500">Desserts</h2>
@@ -422,8 +434,8 @@ import { Image } from "astro:assets";
           <span class="w-full h-[1px] bg-black-500 block"></span>
         </div>
         <!-- Desserts -->
-        <div class="flex flex-row gap-2xl">
-          <div class="flex flex-col sm:flex-row gap-2xl w-full">
+        <div class="flex flex-row gap-ml sm:gap-xl">
+          <div class="flex flex-col sm:flex-row gap-ml sm:gap-2xl w-full">
             <!-- Milkshakes -->
             <div class="flex flex-col gap-3xs relative w-full">
               <h4>Milkshakes</h4>
@@ -444,3 +456,16 @@ import { Image } from "astro:assets";
     </div>
   </section>
 </MainLayout>
+
+<script>
+  // ANIMATIONER
+  import { inView, animate } from "motion";
+
+  /* inView & return på menulinks */
+  inView(".inviewmenulinks", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { duration: 1 });
+    return () => {
+      animate(target, { opacity: 1 });
+    };
+  });
+</script>

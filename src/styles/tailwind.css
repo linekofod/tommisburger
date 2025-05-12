@@ -48,8 +48,8 @@
   --text-display-headline1: clamp(3.750rem, 16vw, 14.375rem);
   --text-headline2: clamp(1.875rem, 5vw, 2.5rem);
   --text-headline3: clamp(1.250rem, 5vw, 1.875rem);
-  --text-headline4: clamp(1.125rem, 5vw, 1.500rem);
-  --text-body-s: clamp(0.750rem, 2vw, 0.850rem);
+  --text-headline4: clamp(1.125rem, 4vw, 1.500rem);
+  --text-body-s: clamp(0.625rem, 2vw, 0.850rem);
   --text-body: clamp(0.750rem, 2vw, 1rem);
   --text-body-xl: clamp(1.000rem, 2vw, 1.125rem);
   --text-button: clamp(0.75rem, 2vw, 1.125rem);
