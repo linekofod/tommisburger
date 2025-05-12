@@ -24,10 +24,7 @@ import { Image } from "astro:assets";
     <!-- MENUS -->
     <div class="flex flex-col">
       <!-- COMBOS -->
-      <div
-        class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl inviewmenulinks"
-        id="combos"
-      >
+      <div class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl" id="combos">
         <!-- Combos header -->
         <div class="flex flex-col gap-m sm:gap-ml">
           <div class="flex flex-col gap-s">
@@ -456,16 +453,3 @@ import { Image } from "astro:assets";
     </div>
   </section>
 </MainLayout>
-
-<script>
-  // ANIMATIONER
-  import { inView, animate } from "motion";
-
-  /* inView & return på menulinks */
-  inView(".inviewmenulinks", ({ target }) => {
-    animate(target, { opacity: [0, 1] }, { duration: 1 });
-    return () => {
-      animate(target, { opacity: 1 });
-    };
-  });
-</script>
