@@ -1,6 +1,8 @@
 ---
 // Henter parametrene fra Astro.props
 const {
+  href = "#",
+  target = "_self",
   cardimage = "",
   cardimagealt = "",
   h3 = "",
@@ -12,17 +14,19 @@ import Button from "./Button.astro";
 ---
 
 <div
-  class="p-s border-1 border-blue-500 w-fit h-[498px] flex flex-col justify-between"
+  class="p-s border-1 border-blue-500 w-fit h-[498px] flex flex-col justify-between hover:outline-1 hover:outline-blue-500"
 >
-  <img src={cardimage} class="w-fit h-[226px]" alt={cardimagealt} />
-  <div class="flex flex-col">
-    <div class="flex flex-col gap-2xs mb-m">
-      <div class="flex flex-col gap-4xs">
-        <h3>{h3}</h3>
-        <h4>{h4}</h4>
+  <a href={href} target={target}>
+    <img src={cardimage} class="w-fit h-[226px]" alt={cardimagealt} />
+    <div class="flex flex-col">
+      <div class="flex flex-col gap-2xs mb-m">
+        <div class="flex flex-col gap-4xs">
+          <h3>{h3}</h3>
+          <h4>{h4}</h4>
+        </div>
+        <p class="max-w-[50ch]">{body}</p>
       </div>
-      <p class="max-w-[50ch]">{body}</p>
     </div>
-  </div>
-  <div class="mt-auto"><Button>Order now</Button></div>
+  </a>
+  <Button>Order now</Button>
 </div>
