@@ -116,11 +116,16 @@
       color: var(--color-black-500);
     }
 
-    p {
+    p, label {
       font-size: var(--text-body);
       font-family: var(--font-roboto);
       color: var(--color-black-500);
     }
+
+    /* Sørger for, at navigationen i burgermenuen ikke lacker og titter frem, når man besøger de forskellige sider. */
+    [x-cloak] {
+      display: none !important;
+    } 
 }
 
 @layer utilities{

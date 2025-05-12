@@ -8,16 +8,17 @@ const {
   h3 = "",
   h4 = "",
   body = "",
+  buttonHref = "#",
 } = Astro.props;
 
 import Button from "./Button.astro";
 ---
 
 <div
-  class="p-s border-1 border-blue-500 w-fit h-[498px] flex flex-col justify-between hover:outline-1 hover:outline-blue-500"
+  class="p-s border-1 border-blue-500 w-fit h-[550px] flex flex-col justify-between hover:outline-1 hover:outline-blue-500"
 >
   <a href={href} target={target}>
-    <img src={cardimage} class="w-fit h-[226px]" alt={cardimagealt} />
+    <img src={cardimage} class="w-full h-[226px]" alt={cardimagealt} />
     <div class="flex flex-col">
       <div class="flex flex-col gap-2xs mb-m">
         <div class="flex flex-col gap-4xs">
@@ -28,5 +29,5 @@ import Button from "./Button.astro";
       </div>
     </div>
   </a>
-  <Button>Order now</Button>
+  <div class="mt-auto"><Button href={buttonHref}>Order now</Button></div>
 </div>

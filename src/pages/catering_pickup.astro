@@ -4,13 +4,13 @@ import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import HeroDisplay from "../components/HeroDisplay.astro";
 import { Image } from "astro:assets";
-import madpapir from "/public/madpapir.webp";
+import pickup from "../../public/images/pickup.svg";
 ---
 
 <MainLayout title="Catering">
   <HeroDisplay height="h-8xl" h1="Catering" />
   <!-- CATERING SELECTIONS -->
-  <section class="m-2xl flex flex-col gap-ml">
+  <section class="m-lg lg:m-2xl flex flex-col gap-ml">
     <div class="flex flex-col gap-xs">
       <h2 class="text-blue-500">Catering the Tommi's Way</h2>
       <p>
@@ -19,30 +19,35 @@ import madpapir from "/public/madpapir.webp";
         event. <br /> Burgers, fries, sides, and good vibes - wherever you are.
       </p>
     </div>
-    <div class="flex flex-col sm:flex-row gap-sm">
+    <div class="flex flex-col sm:flex-row gap-xs lg:gap-sm">
       <div class="outline-1 outline-blue-500">
         <Card
-          href="/catering_pickup"
+          href="#pickupform"
           cardimage="/images/pickup.svg"
           cardimagealt="Blue illustration of an arm in a window with a Tommi's Burger Joint takeaway bag"
           h3="Pick-Up"
           h4="Grab and Go"
           body="Swing by, pick up your feast, and bring the Tommi's magic straight to your table. Quick, easy, and always delicious."
+          buttonHref="#pickupform"
         />
       </div>
       <Card
+        href="/catering_delivery#deliveryform"
         cardimage="/images/delivery.svg"
         cardimagealt="Blue illustration of a delivery truck from Tommi's Burger Joint"
         h3="Delivery"
         h4="Straight to Your Door"
         body="Craving burgers but not the trip? We'll bring the goods to you - hot, juicy, and ready to eat."
+        buttonHref="/catering_delivery#deliveryform"
       />
       <Card
+        href="/catering_setup#setupform"
         cardimage="/images/setup.svg"
         cardimagealt="Blue illustration of a food tent setup from Tommi's Burger Joint"
         h3="Set-Up"
         h4="We'll Handle Everything"
         body="Throwing a party? We'll set it all up, so you can kick back and enjoy killer burgers without lifting a finger."
+        buttonHref="/catering_setup#setupform"
       />
     </div>
   </section>
@@ -50,9 +55,179 @@ import madpapir from "/public/madpapir.webp";
   <!-- PICK UP FORM -->
   <section
     style="background-image: url(/madpapir.webp); background-size: cover; background-repeat: no-repeat;"
-    class="p-6xl"
-    id="form"
+    class="p-2xl lg:p-4xl"
+    id="pickupform"
   >
-    <h2>hello</h2>
+    <div class="bg-neutral-50 p-lg lg:p-3xl flex flex-col gap-m relative">
+      <h2 class="text-blue-500">Order pick up</h2>
+      <div class="flex flex-col gap-sm">
+        <!-- CHOOSE YOUR FEAST -->
+        <form
+          class="bg-neutral-50 border-1 border-black-500 p-sm flex flex-col gap-m"
+        >
+          <div class="flex flex-col gap-3xs">
+            <h3>Choose your feast</h3>
+            <p class="text-body-s">Please note - Drinks are not included.</p>
+          </div>
+          <!-- Burgers -->
+          <div class="flex flex-col gap-xs">
+            <div class="flex flex-col gap-3xs">
+              <h4>Burgers</h4>
+              <p class="text-body-xl">Amount of burgers</p>
+            </div>
+            <div class="flex flex-wrap gap-s">
+              <div class="flex gap-3xs items-center">
+                <label for="beef">Beef burgers</label>
+                <input
+                  type="number"
+                  id="beef"
+                  name="burger"
+                  placeholder="0"
+                  class="w-[55px] h-fit px-3xs py-4xs text-body-s border-1 border-black-500 text-black-500 focus:ring-black-500 focus:border-black-500"
+                />
+              </div>
+              <div class="flex gap-3xs items-center">
+                <label for="veggie">Veggie burgers</label>
+                <input
+                  type="number"
+                  id="veggie"
+                  name="burger"
+                  placeholder="0"
+                  class="w-[55px] h-fit px-3xs py-4xs text-body-s border-1 border-black-500 text-black-500 focus:ring-black-500 focus:border-black-500"
+                />
+              </div>
+              <div class="flex gap-3xs items-center">
+                <label for="vegan">Vegan burgers</label>
+                <input
+                  type="number"
+                  id="vegan"
+                  name="burger"
+                  placeholder="0"
+                  class="w-[55px] h-fit px-3xs py-4xs text-body-s border-1 border-black-500 text-black-500 focus:ring-black-500 focus:border-black-500"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Sides -->
+          <div class="flex flex-col gap-xs">
+            <div class="flex flex-col gap-3xs">
+              <h4>Sides</h4>
+              <p class="text-body-xl">Amount of fries</p>
+            </div>
+            <div class="flex flex-wrap gap-s">
+              <div class="flex gap-3xs items-center">
+                <label for="classicfries">Classic fries</label>
+                <input
+                  type="number"
+                  id="classicfries"
+                  name="sides"
+                  placeholder="0"
+                  class="w-[55px] h-fit px-3xs py-4xs text-body-s border-1 border-black-500 text-black-500 focus:ring-black-500 focus:border-black-500"
+                />
+              </div>
+              <div class="flex gap-3xs items-center">
+                <label for="sweetfries">Sweet potato fries</label>
+                <input
+                  type="number"
+                  id="sweetfries"
+                  name="sides"
+                  placeholder="0"
+                  class="w-[55px] h-fit px-3xs py-4xs text-body-s border-1 border-black-500 text-black-500 focus:ring-black-500 focus:border-black-500"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Dips -->
+          <div class="flex flex-col gap-xs">
+            <div class="flex flex-col gap-3xs">
+              <h4>Dips</h4>
+              <p class="text-body-xl">Amount of dips</p>
+            </div>
+            <div class="flex flex-wrap gap-s">
+              <div class="flex gap-3xs items-center">
+                <label for="cocktailmayo">Tommi's cocktail</label>
+                <input
+                  type="number"
+                  id="cocktailmayo"
+                  name="dips"
+                  placeholder="0"
+                  class="w-[55px] h-fit px-3xs py-4xs text-body-s border-1 border-black-500 text-black-500 focus:ring-black-500 focus:border-black-500"
+                />
+              </div>
+              <div class="flex gap-3xs items-center">
+                <label for="tommimayo">Tommi's mayo</label>
+                <input
+                  type="number"
+                  id="tommimayo"
+                  name="dips"
+                  placeholder="0"
+                  class="w-[55px] h-fit px-3xs py-4xs text-body-s border-1 border-black-500 text-black-500 focus:ring-black-500 focus:border-black-500"
+                />
+              </div>
+              <div class="flex gap-3xs items-center">
+                <label for="tommimayo">Vegan mayo</label>
+                <input
+                  type="number"
+                  id="veganmayo"
+                  name="dips"
+                  placeholder="0"
+                  class="w-[55px] h-fit px-3xs py-4xs text-body-s border-1 border-black-500 text-black-500 focus:ring-black-500 focus:border-black-500"
+                />
+              </div>
+              <div class="flex gap-3xs items-center">
+                <label for="chilimayo">Chili mayo</label>
+                <input
+                  type="number"
+                  id="chilimayo"
+                  name="dips"
+                  placeholder="0"
+                  class="w-[55px] h-fit px-3xs py-4xs text-body-s border-1 border-black-500 text-black-500 focus:ring-black-500 focus:border-black-500"
+                />
+              </div>
+              <div class="flex gap-3xs items-center">
+                <label for="béarnaise">Béarnaise</label>
+                <input
+                  type="number"
+                  id="béarnaise"
+                  name="dips"
+                  placeholder="0"
+                  class="w-[55px] h-fit px-3xs py-4xs text-body-s border-1 border-black-500 text-black-500 focus:ring-black-500 focus:border-black-500"
+                />
+              </div>
+              <div class="flex gap-3xs items-center">
+                <label for="spicybbq">Spicy BBQ</label>
+                <input
+                  type="number"
+                  id="spicybbq"
+                  name="dips"
+                  placeholder="0"
+                  class="w-[55px] h-fit px-3xs py-4xs text-body-s border-1 border-black-500 text-black-500 focus:ring-black-500 focus:border-black-500"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </section>
 </MainLayout>
+
+<style>
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: inner-spin-button;
+    opacity: 1;
+    display: block;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: auto;
+  }
+</style>
+
+<!-- <Image
+        src={pickup}
+        alt="Blue illustration of an arm in a window with a Tommi's Burger Joint takeaway bag"
+        class="absolute right-0"
+      /> -->
