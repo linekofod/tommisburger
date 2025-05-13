@@ -10,10 +10,7 @@ import { Image } from "astro:assets";
   <HeroDisplay height="h-8xl" h1="Our Menu" />
   <section class="grid grid-cols-1 lg:grid-cols-[200px_1fr] mx-s lg:mx-ml">
     <!-- MENU NAVIGATION -->
-    <nav
-      x-data="scrollSpy()"
-      class="hidden lg:flex flex-col gap-3xs sticky top-xl self-start mt-xl"
-    >
+    <nav class="lg:flex flex-col gap-3xs sticky top-xl self-start mt-xl">
       <Link color="black" size="medium" href="#combos">Combos</Link>
       <Link color="black" size="medium" href="#burgers">Burgers</Link>
       <Link color="black" size="medium" href="#sides">Fries</Link>
