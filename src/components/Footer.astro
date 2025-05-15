@@ -55,31 +55,46 @@ import logo from "../../public/logo.svg";
       </div>
     </div>
 
-    <div class="flex flex-col gap-m">
-      <!-- CONTACT US -->
-      <div class="flex flex-col gap-2xs">
-        <h3>Contact Us</h3>
-        <div class="flex flex-row items-center gap-3xs">
-          <!-- Facebook -->
-          <Image src={facebook} alt="Facebook icon" />
-          <!-- Instagram -->
-          <Image src={instagram} alt="Instagram icon" />
-          <!-- Mail -->
-          <Image src={mail} alt="Mail icon" />
-        </div>
-      </div>
-
-      <!-- SMILEY RAPPORT -->
-      <div class="flex flex-col gap-2xs">
-        <h3>Smiley Rapport</h3>
-        <div class="flex flex-row items-center gap-3xs">
-          <!-- Smiley -->
-          <Image src={smiley} alt="Smiley rapport icon" />
-        </div>
+    <!-- CONTACT US -->
+    <div class="flex flex-col gap-2xs">
+      <h3>Contact Us</h3>
+      <div class="flex flex-row items-center gap-3xs">
+        <!-- Facebook -->
+        <Link
+          href="https://www.facebook.com/burgerjointdk/"
+          variant="textLink"
+          target="_blank"><Image src={facebook} alt="Facebook icon" /></Link
+        >
+        <!-- Instagram -->
+        <Link
+          href="https://www.instagram.com/tommisburgerjointdk/"
+          variant="textLink"
+          target="_blank"><Image src={instagram} alt="Instagram icon" /></Link
+        >
+        <!-- Mail -->
+        <Link
+          href="mailto:info@burgerjoint.dk"
+          variant="textLink"
+          target="_blank"><Image src={mail} alt="Mail icon" /></Link
+        >
       </div>
     </div>
 
-    <!-- Logo -->
-    <Image src={logo} width="220px" alt="Tommi's Burger Joint logo" />
+    <!-- SMILEY RAPPORT -->
+    <div class="flex flex-col gap-2xs">
+      <h3>Smiley Rapport</h3>
+      <div class="flex flex-row items-center gap-3xs">
+        <Link
+          variant="textLink"
+          size="small"
+          color="black"
+          target="_blank"
+          href="https://www.findsmiley.dk/544944">Read our rapport here</Link
+        >
+      </div>
+    </div>
   </div>
 </div>
+
+<!-- Logo -->
+<!-- <Image src={logo} width="220px" alt="Tommi's Burger Joint logo" /> -->

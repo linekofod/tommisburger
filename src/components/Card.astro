@@ -15,9 +15,9 @@ import Button from "./Button.astro";
 ---
 
 <div
-  class="p-s border-1 border-blue-500 w-fit h-[550px] flex flex-col justify-between hover:outline-1 hover:outline-blue-500"
+  class="p-s border-1 border-blue-500 w-fit h-full flex flex-col justify-between hover:outline-1 hover:outline-blue-500"
 >
-  <a href={href} target={target}>
+  <a href={href} target={target} class="h-[380px] md:h-[450px] lg:h-[420px]">
     <img src={cardimage} class="w-full h-[226px]" alt={cardimagealt} />
     <div class="flex flex-col">
       <div class="flex flex-col gap-2xs mb-m">
@@ -25,7 +25,7 @@ import Button from "./Button.astro";
           <h3>{h3}</h3>
           <h4>{h4}</h4>
         </div>
-        <p class="max-w-[50ch]">{body}</p>
+        <p class="max-w-[40ch]">{body}</p>
       </div>
     </div>
   </a>

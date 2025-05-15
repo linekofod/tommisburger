@@ -9,7 +9,9 @@ import { Image } from "astro:assets";
 <MainLayout title="Catering">
   <HeroDisplay height="h-8xl" h1="Catering" />
   <!-- CATERING SELECTIONS -->
-  <section class="m-2xl flex flex-col gap-ml">
+  <section
+    class="my-lg sm:my-xl flex flex-col gap-sm lg:gap-ml max-w-fit mx-auto px-s sm:px-xl"
+  >
     <div class="flex flex-col gap-xs">
       <h2 class="text-blue-500">Catering the Tommi's Way</h2>
       <p>
@@ -18,33 +20,33 @@ import { Image } from "astro:assets";
         event. <br /> Burgers, fries, sides, and good vibes - wherever you are.
       </p>
     </div>
-    <div class="flex flex-col sm:flex-row gap-sm">
+    <div class="flex flex-col sm:flex-row gap-s lg:gap-sm">
       <Card
-        href="/catering_pickup#pickupform"
+        href="/catering_pickup#pickup"
         cardimage="/images/pickup.svg"
         cardimagealt="Blue illustration of an arm in a window with a Tommi's Burger Joint takeaway bag"
         h3="Pick-Up"
         h4="Grab and Go"
         body="Swing by, pick up your feast, and bring the Tommi's magic straight to your table. Quick, easy, and always delicious."
-        buttonHref="/catering_pickup#pickupform"
+        buttonHref="/catering_pickup#pickup"
       />
       <Card
-        href="/catering_delivery#deliveryform"
+        href="/catering_delivery#delivery"
         cardimage="/images/delivery.svg"
         cardimagealt="Blue illustration of a delivery truck from Tommi's Burger Joint"
         h3="Delivery"
         h4="Straight to Your Door"
         body="Craving burgers but not the trip? We'll bring the goods to you - hot, juicy, and ready to eat."
-        buttonHref="/catering_delivery#deliveryform"
+        buttonHref="/catering_delivery#delivery"
       />
       <Card
-        href="/catering_setup#setupform"
+        href="/catering_setup#setup"
         cardimage="/images/setup.svg"
         cardimagealt="Blue illustration of a food tent setup from Tommi's Burger Joint"
         h3="Set-Up"
         h4="We'll Handle Everything"
         body="Throwing a party? We'll set it all up, so you can kick back and enjoy killer burgers without lifting a finger."
-        buttonHref="/catering_setup#setupform"
+        buttonHref="/catering_setup#setup"
       />
     </div>
   </section>
