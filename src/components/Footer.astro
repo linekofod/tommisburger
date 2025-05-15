@@ -5,13 +5,15 @@ import display from "../../public/images/footer_display.svg";
 import facebook from "../../public/images/facebook.svg";
 import instagram from "../../public/images/instagram.svg";
 import mail from "../../public/images/mail.svg";
-import smiley from "../../public/images/smiley.svg";
-import logo from "../../public/logo.svg";
 ---
 
 <div class="p-s lg:p-m sticky bottom-0 bg-neutral-50 mt-ml sm:mt-xl lg:mt-2xl">
   <!-- DISPLAY TEXT -->
-  <Image src={display} alt="Big display text saying 'Born Hungry'" />
+  <Image
+    src={display}
+    class="w-full"
+    alt="Big display text saying 'Born Hungry'"
+  />
 
   <div
     class="flex flex-col sm:flex-wrap sm:flex-row sm:justify-between gap-sm mt-sm sm:mt-ml"
@@ -95,6 +97,3 @@ import logo from "../../public/logo.svg";
     </div>
   </div>
 </div>
-
-<!-- Logo -->
-<!-- <Image src={logo} width="220px" alt="Tommi's Burger Joint logo" /> -->

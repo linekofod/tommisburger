@@ -7,7 +7,7 @@ import Button from "../components/Button.astro";
 
 <section
   style="background-image: url(/madpapir.webp); background-size: cover; background-repeat: no-repeat;"
-  class="p-ml md:p-2xl lg:p-4xl"
+  class="p-xs md:p-2xl lg:p-4xl"
   x-data="{ showsetupform: false, showlockitform: false }"
 >
   <div
@@ -299,7 +299,7 @@ import Button from "../components/Button.astro";
                 name="comments"
                 id="comments"
                 placeholder="Type here"
-                class="w-8xl h-fit px-3xs pt-4xs pb-lg font-roboto text-body-s border-1 border-black-500 text-black-500 focus:ring-black-500 focus:border-black-500"
+                class="max-w-8xl h-fit px-3xs pt-4xs pb-lg font-roboto text-body-s border-1 border-black-500 text-black-500 focus:ring-black-500 focus:border-black-500"
               ></textarea></label
             >
           </div>
@@ -328,7 +328,7 @@ import Button from "../components/Button.astro";
             </div>
             <div class="flex flex-wrap gap-s">
               <div class="flex gap-3xs items-center">
-                <label for="credit">Credit card</label>
+                <label for="credit">Credit Card</label>
                 <input
                   type="radio"
                   id="credit"
