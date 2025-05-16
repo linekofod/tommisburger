@@ -35,7 +35,9 @@ import vinyl from "../../public/images/vinyl.webp";
   </section>
 
   <!-- ABOUT TOMMI'S (WHITE SECTION) -->
-  <section class="grid md:grid-cols-2 gap-m lg:gap-xl p-m md:p-lg lg:p-3xl">
+  <section
+    class="grid md:grid-cols-2 gap-m lg:gap-xl p-m md:p-lg lg:p-3xl fadein"
+  >
     <div class="content-center order-2 md:order-none">
       <h2 class="text-blue-500 mb-xs md:mb-sm">
         No Reservations.<br />
@@ -142,7 +144,7 @@ import vinyl from "../../public/images/vinyl.webp";
 
   <!-- INSTAGRAM -->
   <section
-    class="flex flex-col gap-s sm:gap-ml items-center p-m md:p-lg lg:p-xl"
+    class="flex flex-col gap-s sm:gap-ml items-center p-m md:p-lg lg:p-xl fadein2"
   >
     <h2>See What's Cooking on OUR INSTAGRAM</h2>
     <div class="grid grid-cols-2 sm:grid-cols-4 grid-rows-2 gap-2xs">
@@ -212,3 +214,29 @@ import vinyl from "../../public/images/vinyl.webp";
     animation: spin 5s linear infinite;
   }
 </style>
+
+<script>
+  // ANIMATIONER
+  import { inView, animate } from "motion";
+
+  //   InView animation
+  const fadein = document.querySelector(".fadein");
+
+  inView(fadein, () => {
+    fadein.classList.add(
+      "animate__animated",
+      "animate__fadeInUp",
+      "animate__slow"
+    );
+  });
+
+  const fadein2 = document.querySelector(".fadein2");
+
+  inView(fadein2, () => {
+    fadein2.classList.add(
+      "animate__animated",
+      "animate__fadeInUp",
+      "animate__slow"
+    );
+  });
+</script>
