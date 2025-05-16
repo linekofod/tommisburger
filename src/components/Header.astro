@@ -13,8 +13,17 @@ import logo from "../../public/logo.svg";
     >
     <div class="flex gap-sm">
       <!-- CTA -->
-      <div class="self-center hidden sm:block">
-        <Button href="/our_menu">Our menu</Button>
+      <div class="flex gap-xs">
+        <div class="self-center hidden sm:block">
+          <Button href="/our_menu">Our menu</Button>
+        </div>
+        <div class="self-center hidden sm:block">
+          <Button
+            variant="secondary"
+            href="https://burgerjoint.mealo.dk/"
+            target="_blank">Order now</Button
+          >
+        </div>
       </div>
 
       <!-- BURGERMENU -->
@@ -119,7 +128,18 @@ import logo from "../../public/logo.svg";
         <Link href="/about_us">About Us</Link>
       </div>
       <!-- CTA -->
-      <div class="self-center block sm:hidden"><Button>Order Now</Button></div>
+      <div class="flex gap-2xs">
+        <div class="self-center block sm:hidden">
+          <Button href="/our_menu">Our menu</Button>
+        </div>
+        <div class="self-center block sm:hidden">
+          <Button
+            variant="secondary"
+            href="https://burgerjoint.mealo.dk/"
+            target="_blank">Order now</Button
+          >
+        </div>
+      </div>
     </div>
   </nav>
 </div>
