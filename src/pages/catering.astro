@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import Card from "../components/Card.astro";
+import CateringCard from "../components/CateringCard.astro";
 import HeroDisplay from "../components/HeroDisplay.astro";
 import { Image } from "astro:assets";
 ---
@@ -21,7 +21,7 @@ import { Image } from "astro:assets";
       </p>
     </div>
     <div class="flex flex-col sm:flex-row gap-s lg:gap-sm">
-      <Card
+      <CateringCard
         href="/catering_pickup#pickup"
         cardimage="/images/pickup.svg"
         cardimagealt="Blue illustration of an arm in a window with a Tommi's Burger Joint takeaway bag"
@@ -30,7 +30,7 @@ import { Image } from "astro:assets";
         body="Swing by, pick up your feast, and bring the Tommi's magic straight to your table. Quick, easy, and always delicious."
         buttonHref="/catering_pickup#pickup"
       />
-      <Card
+      <CateringCard
         href="/catering_delivery#delivery"
         cardimage="/images/delivery.svg"
         cardimagealt="Blue illustration of a delivery truck from Tommi's Burger Joint"
@@ -39,7 +39,7 @@ import { Image } from "astro:assets";
         body="Craving burgers but not the trip? We'll bring the goods to you - hot, juicy, and ready to eat."
         buttonHref="/catering_delivery#delivery"
       />
-      <Card
+      <CateringCard
         href="/catering_setup#setup"
         cardimage="/images/setup.svg"
         cardimagealt="Blue illustration of a food tent setup from Tommi's Burger Joint"
