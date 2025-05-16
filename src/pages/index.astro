@@ -1,11 +1,13 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import { Image } from "astro:assets";
-import TommiHero from "../../public/images/tommi_hero";
-import BurgerStack from "../../public/images/burger_stack.webp";
-import madpapir from "../../public/madpapir.webp";
 import HeroDisplay from "../components/HeroDisplay.astro";
+import CateringCard from "../components/CateringCard.astro";
+import InstaCard from "../components/InstaCard.astro";
+import { Image } from "astro:assets";
+import burgerstack from "../../public/images/burger_stack.webp";
+import vinyl_img from "../../public/images/vinyl_img.webp";
+import vinyl from "../../public/images/vinyl.webp";
 ---
 
 <MainLayout title="Tommi's Burger Joint">
@@ -14,70 +16,199 @@ import HeroDisplay from "../components/HeroDisplay.astro";
     h1="BORN HUNGRY"
   />
 
+  <!-- ABOUT TOMMI'S (BLACK SECTION) -->
   <section class="bg-black-500">
-    <div class="gap-xl container mx-auto grid md:grid-cols-2 pt-5xl pb-5xl">
+    <div class="grid md:grid-cols-2 gap-s lg:gap-xl p-m md:p-lg lg:p-3xl">
       <h2 class="text-neutral-50">
-        WE ARE TOMMI’S BURGER JOINT<br />
-        – REAL BURGERS, NO BULLSH*T
+        WE ARE TOMMI'S BURGER JOINT<br />
+        - REAL BURGERS, NO BULLSH*T
       </h2>
       <div class="max-w-[55ch]">
         <p class="text-neutral-50">
-          Since 1981, Tommi’s has been flipping honest, no-fuss burgers that hit
-          just right. Fresh ingredients, juicy patties, old-school vibes – it’s
-          all about simple food done damn well. No gimmicks, no shortcuts – just
+          Since 1981, Tommi's has been flipping honest, no-fuss burgers that hit
+          just right. Fresh ingredients, juicy patties, old-school vibes - it's
+          all about simple food done damn well. No gimmicks, no shortcuts - just
           the kind of burgers you crave. Come hungry, leave happy.
         </p>
       </div>
     </div>
   </section>
-  <!--- Mathilde arbejder ovenobver-->
 
-  <section class="grid grid-cols-2 gap-4xl m-5xl">
-    <div class="content-center">
-      <h2 class="text-blue-500 mb-sm">
+  <!-- ABOUT TOMMI'S (WHITE SECTION) -->
+  <section class="grid md:grid-cols-2 gap-m lg:gap-xl p-m md:p-lg lg:p-3xl">
+    <div class="content-center order-2 md:order-none">
+      <h2 class="text-blue-500 mb-xs md:mb-sm">
         No Reservations.<br />
         No Rules.<br />
         Just Burgers.
       </h2>
       <div class="flex flex-col gap-xs">
         <p>
-          Our menu is all about juicy burgers, crispy fries, and cold drinks –
+          Our menu is all about juicy burgers, crispy fries, and cold drinks -
           nothing fancy, just damn good food made with love. No need to book a
-          table – just roll up, grab a seat, and dig in.
+          table - just roll up, grab a seat, and dig in.
         </p>
         <p>
           Want to stay in your sweatpants? We get it. Order takeaway and enjoy
-          Tommi’s from your couch. However you want it, we’ve got you.
+          Tommi's from your couch. However you want it, we've got you.
         </p>
       </div>
-      <div class="flex mt-m gap-xs">
+      <div class="flex mt-s md:mt-m gap-xs">
         <Button>OUR MENU</Button>
         <Button variant="secondary">ORDER NOW</Button>
       </div>
     </div>
-
-    <div class="">
-      <Image
-        src={BurgerStack}
-        alt="3 stacked burgers from Tommis Burger Joint"
-        class="w-full h-full"
-      />
-    </div>
+    <Image
+      src={burgerstack}
+      alt="3 stacked burgers from Tommis Burger Joint"
+      class="w-full h-full object-cover"
+    />
   </section>
 
   <!-- CATERING -->
-
-  <section>
-    <div class="h-screen w-full overflow-hidden">
-      <Image src={madpapir} alt="madpapir" class="object-cover" />
+  <section
+    style="background-image: url(/madpapir.webp); background-size: cover; background-repeat: no-repeat;"
+    class="p-m lg:p-lg xl:p-4xl"
+  >
+    <div
+      class="bg-neutral-50 p-sm md:p-m lg:p-ml xl:p-2xl flex flex-col gap-s md:gap-m w-fit items-center mx-auto max-w-max"
+    >
+      <h2 class="text-blue-500">Catering the Tommi's Way</h2>
+      <div class="flex flex-col md:flex-row gap-s xl:gap-sm">
+        <CateringCard
+          href="/catering_pickup#pickup"
+          cardimage="/images/pickup.svg"
+          cardimagealt="Blue illustration of an arm in a window with a Tommi's Burger Joint takeaway bag"
+          h3="Pick-Up"
+          h4="Grab and Go"
+          body="Swing by, pick up your feast, and bring the Tommi's magic straight to your table. Quick, easy, and always delicious."
+          buttonHref="/catering_pickup#pickup"
+        />
+        <CateringCard
+          href="/catering_delivery#delivery"
+          cardimage="/images/delivery.svg"
+          cardimagealt="Blue illustration of a delivery truck from Tommi's Burger Joint"
+          h3="Delivery"
+          h4="Straight to Your Door"
+          body="Craving burgers but not the trip? We'll bring the goods to you - hot, juicy, and ready to eat."
+          buttonHref="/catering_delivery#delivery"
+        />
+        <CateringCard
+          href="/catering_setup#setup"
+          cardimage="/images/setup.svg"
+          cardimagealt="Blue illustration of a food tent setup from Tommi's Burger Joint"
+          h3="Set-Up"
+          h4="We'll Handle Everything"
+          body="Throwing a party? We'll set it all up, so you can kick back and enjoy killer burgers without lifting a finger."
+          buttonHref="/catering_setup#setup"
+        />
+      </div>
     </div>
   </section>
 
   <!-- SPOTIFY PLAYLISTE -->
+  <section class="bg-black-500 flex flex-col items-center">
+    <div class="p-m md:p-lg lg:p-3xl flex flex-col gap-s sm:gap-ml">
+      <h2 class="text-neutral-50 text-center">
+        Listen to the Sound of Tommi's
+      </h2>
+      <div class="flex relative left-[50%] sm:left-[35%] translate-x-[-50%]">
+        <div class="relative w-full z-10">
+          <iframe
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/playlist/2B3aAjgr3iQz30FJyfnaqp?utm_source=generator&theme=0"
+            width="100%"
+            height="452"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          >
+          </iframe>
+          <Image
+            src={vinyl_img}
+            alt="Happy people eating and drinking outside of Tommi's Burger Joint"
+            class="w-[114px] sm:w-[155px] rounded-lg absolute top-[16px] sm:top-[24px] left-[16px] sm:left-[22px] z-auto"
+          />
+        </div>
+        <Image
+          src={vinyl}
+          alt="Vinyl"
+          class="hidden sm:block absolute left-[300px] lg:left-[360px] w-[420px] top-[50%] translate-y-[-50%] rotate"
+        />
+      </div>
+    </div>
+  </section>
 
-  <section class="bg-black-500 text-center">
-    <section class="p-5xl">
-      <h2 class="text-neutral-50">Listen to the Sound of Tommi’s</h2>
-    </section>
+  <!-- INSTAGRAM -->
+  <section
+    class="flex flex-col gap-s sm:gap-ml items-center p-m md:p-lg lg:p-xl"
+  >
+    <h2>See What's Cooking on OUR INSTAGRAM</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-4 grid-rows-2 gap-2xs">
+      <InstaCard
+        cardimage="/images/insta_img1.webp"
+        cardimagealt=""
+        instalink="https://www.instagram.com/p/DJHRbOrMLc_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        instatext="Big thanks to everyone who came out to our catering showcase last Thursday!"
+      />
+      <InstaCard
+        cardimage="/images/insta_img2.webp"
+        cardimagealt=""
+        instalink="https://www.instagram.com/p/DJBwvkKMvA6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        instatext="Our Bacon Cheeseburger is a timeless classic. What's your go-to burger?"
+      />
+      <InstaCard
+        cardimage="/images/insta_img3.webp"
+        cardimagealt=""
+        instalink="https://www.instagram.com/p/DI4Fst1oPjk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        instatext="Wine is always fine on Fridays. See you at Tommi's on the sunny side."
+      />
+      <InstaCard
+        cardimage="/images/insta_img4.webp"
+        cardimagealt=""
+        instalink="https://www.instagram.com/p/DIx3HA-hR3O/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        instatext="Homemade just hits different."
+      />
+      <InstaCard
+        cardimage="/images/insta_img5.webp"
+        cardimagealt=""
+        instalink="https://www.instagram.com/p/DIs35jftiTZ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        instatext="Last day of Easter break - don't waste it. We're open and hope to see you."
+      />
+      <InstaCard
+        cardimage="/images/insta_img6.webp"
+        cardimagealt=""
+        instalink="https://www.instagram.com/p/DIoa2vOxDlJ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        instatext="You might have tried our burger, but have you also tried our deep fried ice cream sandwich?"
+      />
+      <InstaCard
+        cardimage="/images/insta_img7.webp"
+        cardimagealt=""
+        instalink="https://www.instagram.com/p/DIikwTvtWoB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        instatext="After all the Easter treats, why not treat yourself to something even better?"
+      />
+      <InstaCard
+        cardimage="/images/insta_img8.webp"
+        cardimagealt=""
+        instalink="https://www.instagram.com/p/DIbYqaEtibI/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        instatext="Easter's approaching, but we've got no time for egg hunting. Instead, we'll be flipping burgers all week long."
+      />
+    </div>
   </section>
 </MainLayout>
+
+<style>
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .rotate {
+    animation: spin 5s linear infinite;
+  }
+</style>
