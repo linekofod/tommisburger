@@ -1,5 +1,47 @@
 ---
-
+// Henter parametrene fra Astro.props
+const {
+  cardimage = "",
+  cardimagealt = "",
+  target = "_blank",
+  instalink = "",
+  instatext = "",
+} = Astro.props;
 ---
 
-<div></div>
+<div class="flex flex-col relative group">
+  <!-- Insta image -->
+  <img src={cardimage} alt={cardimagealt} class="w-full" />
+
+  <!-- Hover overlay -->
+  <a
+    href={instalink}
+    target={target}
+    class="bg-[#1c1c1bcc] p-s h-full w-full absolute top-0 left-0 z-10 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+  >
+    <svg
+      class="self-end"
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      viewBox="0 0 30 30"
+      fill="none"
+    >
+      <path
+        d="M1 15C1 8.40084 1 5.09979 3.04989 3.04989C5.09979 1 8.39937 1 15 1C21.5992 1 24.9002 1 26.9501 3.04989C29 5.09979 29 8.39937 29 15C29 21.5992 29 24.9002 26.9501 26.9501C24.9002 29 21.6006 29 15 29C8.40084 29 5.09979 29 3.04989 26.9501C1 24.9002 1 21.6006 1 15Z"
+        stroke="white"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+      <path
+        d="M23.1168 6.89478H23.1021M21.6313 15C21.6313 16.7588 20.9326 18.4456 19.689 19.6893C18.4453 20.9329 16.7585 21.6316 14.9997 21.6316C13.2409 21.6316 11.5542 20.9329 10.3105 19.6893C9.06685 18.4456 8.36816 16.7588 8.36816 15C8.36816 13.2412 9.06685 11.5545 10.3105 10.3108C11.5542 9.06714 13.2409 8.36846 14.9997 8.36846C16.7585 8.36846 18.4453 9.06714 19.689 10.3108C20.9326 11.5545 21.6313 13.2412 21.6313 15Z"
+        stroke="white"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+    </svg>
+    <p class="text-neutral-50">
+      {instatext}
+    </p>
+  </a>
+</div>
