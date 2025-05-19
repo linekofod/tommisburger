@@ -35,10 +35,8 @@ import vinyl from "../../public/images/vinyl.webp";
   </section>
 
   <!-- ABOUT TOMMI'S (WHITE SECTION) -->
-  <section
-    class="grid md:grid-cols-2 gap-m lg:gap-xl p-m md:p-lg lg:p-3xl fadein"
-  >
-    <div class="content-center order-2 md:order-none">
+  <section class="grid md:grid-cols-2 gap-m lg:gap-xl p-m md:p-lg lg:p-3xl">
+    <div class="content-center order-2 md:order-none fadein">
       <h2 class="text-blue-500 mb-xs md:mb-sm">
         No Reservations.<br />
         No Rules.<br />
@@ -67,13 +65,13 @@ import vinyl from "../../public/images/vinyl.webp";
     <Image
       src={burgerstack}
       alt="3 stacked burgers from Tommis Burger Joint"
-      class="w-full h-full object-cover"
+      class="w-full h-full object-cover overflow-hidden relative"
     />
   </section>
 
   <!-- CATERING -->
   <section
-    style="background-image: url(/madpapir.webp); background-size: cover; background-repeat: no-repeat;"
+    style="background-image: url(/madpapir.webp); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;"
     class="p-m lg:p-lg xl:p-4xl"
   >
     <div
@@ -88,7 +86,6 @@ import vinyl from "../../public/images/vinyl.webp";
           h3="Pick-Up"
           h4="Grab and Go"
           body="Swing by, pick up your feast, and bring the Tommi's magic straight to your table. Quick, easy, and always delicious."
-          buttonHref="/catering_pickup#pickup"
         />
         <CateringCard
           href="/catering_delivery#delivery"
@@ -97,7 +94,6 @@ import vinyl from "../../public/images/vinyl.webp";
           h3="Delivery"
           h4="Straight to Your Door"
           body="Craving burgers but not the trip? We'll bring the goods to you - hot, juicy, and ready to eat."
-          buttonHref="/catering_delivery#delivery"
         />
         <CateringCard
           href="/catering_setup#setup"
@@ -106,7 +102,6 @@ import vinyl from "../../public/images/vinyl.webp";
           h3="Set-Up"
           h4="We'll Handle Everything"
           body="Throwing a party? We'll set it all up, so you can kick back and enjoy killer burgers without lifting a finger."
-          buttonHref="/catering_setup#setup"
         />
       </div>
     </div>
@@ -137,18 +132,18 @@ import vinyl from "../../public/images/vinyl.webp";
             class="w-[114px] sm:w-[155px] rounded-lg absolute top-[16px] sm:top-[24px] left-[16px] sm:left-[22px] z-auto"
           />
         </div>
-        <Image
-          src={vinyl}
-          alt="Vinyl"
-          class="hidden sm:block absolute left-[350px] lg:left-[360px] w-[330px] lg:w-[420px] top-[50%] translate-y-[-50%] rotate"
-        />
+        <div
+          class="hidden sm:block absolute left-[350px] lg:left-[360px] w-[330px] lg:w-[420px] top-[50%] translate-y-[-50%] fadein2"
+        >
+          <Image src={vinyl} alt="Vinyl" class="rotate" />
+        </div>
       </div>
     </div>
   </section>
 
   <!-- INSTAGRAM -->
   <section
-    class="flex flex-col gap-s sm:gap-ml items-center p-m md:p-lg lg:p-xl fadein2"
+    class="flex flex-col gap-s sm:gap-ml items-center p-m md:p-lg lg:p-xl"
   >
     <h2>See What's Cooking on OUR INSTAGRAM</h2>
     <div class="grid grid-cols-2 sm:grid-cols-4 grid-rows-2 gap-2xs">
@@ -230,7 +225,7 @@ import vinyl from "../../public/images/vinyl.webp";
   inView(fadein, () => {
     fadein.classList.add(
       "animate__animated",
-      "animate__fadeInUp",
+      "animate__fadeInRight",
       "animate__slow"
     );
   });
@@ -240,7 +235,7 @@ import vinyl from "../../public/images/vinyl.webp";
   inView(fadein2, () => {
     fadein2.classList.add(
       "animate__animated",
-      "animate__fadeInUp",
+      "animate__fadeInLeft",
       "animate__slow"
     );
   });

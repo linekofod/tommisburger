@@ -6,7 +6,7 @@ import Button from "../components/Button.astro";
 ---
 
 <section
-  style="background-image: url(/madpapir.webp); background-size: cover; background-repeat: no-repeat;"
+  style="background-image: url(/madpapir.webp); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;"
   class="p-xs md:p-2xl lg:p-4xl"
   x-data="{ showsetupform: false, showlockitform: false }"
 >
@@ -163,8 +163,16 @@ import Button from "../components/Button.astro";
             </div>
           </div>
         </div>
-        <div class="self-end" x-on:click="showsetupform = true">
-          <Button href="#setupform">Continue</Button>
+        <!-- Button (ved klik åbnes næste form og scrolles ned til den) -->
+        <div
+          class="self-end"
+          x-on:click.prevent="showsetupform = true;
+          $nextTick(() => {
+            document.getElementById('setupform')?.scrollIntoView({ behavior: 'smooth' });
+          });
+        "
+        >
+          <Button>Continue</Button>
         </div>
       </form>
 
@@ -303,8 +311,16 @@ import Button from "../components/Button.astro";
               ></textarea></label
             >
           </div>
-          <div class="self-end" x-on:click="showlockitform = true">
-            <Button href="#lockitform">Continue</Button>
+          <!-- Button (ved klik åbnes næste form og scrolles ned til den) -->
+          <div
+            class="self-end"
+            x-on:click.prevent="showlockitform = true;
+            $nextTick(() => {
+              document.getElementById('lockitform')?.scrollIntoView({ behavior: 'smooth' });
+            });
+          "
+          >
+            <Button>Continue</Button>
           </div>
         </div>
       </form>

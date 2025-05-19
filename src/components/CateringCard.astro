@@ -8,14 +8,20 @@ const {
   h3 = "",
   h4 = "",
   body = "",
-  buttonHref = "#",
+  active = "false",
 } = Astro.props;
+
+const activeCard = {
+  true: "outline-1 outline-blue-500 w-fit",
+  false: "",
+};
 
 import Button from "./Button.astro";
 ---
 
 <div
   class="p-s border-1 border-blue-500 w-fit h-full flex flex-col justify-between hover:outline-1 hover:outline-blue-500"
+  class:list={[activeCard[active]]}
 >
   <a href={href} target={target} class="h-[380px] md:h-[450px] lg:h-[420px]">
     <img src={cardimage} class="w-full h-[226px]" alt={cardimagealt} />
@@ -28,6 +34,6 @@ import Button from "./Button.astro";
         <p class="max-w-[40ch]">{body}</p>
       </div>
     </div>
+    <div class="mt-auto"><Button href={href}>Order now</Button></div>
   </a>
-  <div class="mt-auto"><Button href={buttonHref}>Order now</Button></div>
 </div>
