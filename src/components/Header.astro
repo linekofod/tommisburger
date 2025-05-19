@@ -29,12 +29,12 @@ import logo from "../../public/logo.svg";
       <!-- BURGERMENU -->
       <button
         id="burgermenu"
-        class="z-50 cursor-pointer xl:block object-contain w-[46px] h-[47px] sm:w-[57px] sm:h-[58px]"
+        class="z-50 xl:block object-contain w-[46px] h-[47px] sm:w-[57px] sm:h-[58px]"
         x-on:click="showmenu = ! showmenu"
       >
         <!-- Burger closed -->
         <svg
-          class="sm:w-[58px] sm:h-[41px]"
+          class="sm:w-[58px] sm:h-[41px] cursor-pointer"
           x-show="!showmenu"
           x-cloak
           xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +76,7 @@ import logo from "../../public/logo.svg";
 
         <!-- Burger open -->
         <svg
-          class="sm:w-[57px] sm:h-[58px]"
+          class="sm:w-[57px] sm:h-[58px] cursor-pointer"
           x-show="showmenu"
           x-cloak
           xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +114,7 @@ import logo from "../../public/logo.svg";
   <!-- NAVIGATION -->
   <nav
     id="navmenu"
-    class="xl:block flex flex-col bg-neutral-50 h-[calc(100vh-96px)] w-full mt-xl sm:mt-2xl items-center"
+    class="xl:block flex flex-col bg-neutral-50 h-screen w-full pt-xl sm:pt-2xl items-center"
     x-cloak
     x-show="showmenu"
     x-transition

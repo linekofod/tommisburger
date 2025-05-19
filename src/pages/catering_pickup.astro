@@ -7,9 +7,9 @@ import CateringForm from "../components/CateringForm.astro";
 import { Image } from "astro:assets";
 ---
 
-<MainLayout title="Catering">
+<MainLayout title="Pick Up">
   <HeroDisplay height="h-8xl" h1="Catering" />
-  <!-- CATERING SELECTIONS -->
+  <!-- CATERING -->
   <section
     class="my-lg sm:my-xl flex flex-col gap-sm lg:gap-ml max-w-fit mx-auto px-s sm:px-xl"
   >
@@ -21,6 +21,7 @@ import { Image } from "astro:assets";
         event. <br /> Burgers, fries, sides, and good vibes - wherever you are.
       </p>
     </div>
+    <!-- Catering cards -->
     <div class="flex flex-col md:flex-row gap-s lg:gap-sm">
       <div class="outline-1 outline-blue-500 w-fit">
         <CateringCard
