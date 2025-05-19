@@ -8,21 +8,45 @@ import { Image } from "astro:assets";
 
 <MainLayout title="Our Menu">
   <HeroDisplay height="h-8xl" h1="Our Menu" />
-  <section class="grid grid-cols-1 lg:grid-cols-[200px_1fr] mx-s lg:mx-ml">
+  <div class="grid grid-cols-1 lg:grid-cols-[200px_1fr] mx-s lg:mx-ml">
     <!-- MENU NAVIGATION -->
     <nav class="hidden lg:flex flex-col gap-3xs sticky top-xl self-start mt-xl">
-      <Link color="black" size="medium" href="#combos">Combos</Link>
-      <Link color="black" size="medium" href="#burgers">Burgers</Link>
-      <Link color="black" size="medium" href="#sides">Fries</Link>
-      <Link color="black" size="medium" href="#dips">Dips</Link>
-      <Link color="black" size="medium" href="#drinks">Drinks</Link>
-      <Link color="black" size="medium" href="#desserts">Desserts</Link>
+      <a
+        href="#combos"
+        class="combos uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
+        >Combos</a
+      >
+      <a
+        href="#burgers"
+        class="burgers uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
+        >Burgers</a
+      >
+      <a
+        href="#fries"
+        class="fries uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
+        >Fries</a
+      >
+      <a
+        href="#dips"
+        class="dips uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
+        >Dips</a
+      >
+      <a
+        href="#drinks"
+        class="drinks uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
+        >Drinks</a
+      >
+      <a
+        href="#desserts"
+        class="desserts uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
+        >Desserts</a
+      >
     </nav>
 
     <!-- MENUS -->
     <div class="flex flex-col">
       <!-- COMBOS -->
-      <div class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl" id="combos">
+      <section class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl" id="combos">
         <!-- Combos header -->
         <div class="flex flex-col gap-m sm:gap-ml">
           <div class="flex flex-col gap-s">
@@ -133,10 +157,13 @@ import { Image } from "astro:assets";
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- BURGERS -->
-      <div class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl" id="burgers">
+      <section
+        class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl"
+        id="burgers"
+      >
         <!-- Burgers header -->
         <div class="flex flex-col gap-m sm:gap-ml">
           <div class="flex flex-col gap-s">
@@ -228,10 +255,10 @@ import { Image } from "astro:assets";
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- FRIES -->
-      <div class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl" id="sides">
+      <section class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl" id="fries">
         <div class="flex flex-col gap-ml">
           <!-- Fries header -->
           <div class="flex flex-col gap-m sm:gap-ml">
@@ -271,10 +298,10 @@ import { Image } from "astro:assets";
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- DIPS -->
-      <div class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl" id="dips">
+      <section class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl" id="dips">
         <!-- Dips header -->
         <div class="flex flex-col gap-m sm:gap-ml">
           <div class="flex flex-col gap-s">
@@ -352,10 +379,10 @@ import { Image } from "astro:assets";
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- DRINKS -->
-      <div class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl" id="drinks">
+      <section class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl" id="drinks">
         <!-- Drinks header -->
         <div class="flex flex-col gap-m sm:gap-ml">
           <div class="flex flex-col gap-s">
@@ -408,10 +435,13 @@ import { Image } from "astro:assets";
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- DESSERTS -->
-      <div class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl" id="desserts">
+      <section
+        class="flex flex-col gap-m sm:gap-ml pt-lg sm:pt-xl"
+        id="desserts"
+      >
         <!-- Desserts header -->
         <div class="flex flex-col gap-m sm:gap-ml">
           <div class="flex flex-col gap-s">
@@ -448,7 +478,40 @@ import { Image } from "astro:assets";
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  </section>
+  </div>
 </MainLayout>
+
+<style>
+  .active {
+    color: #054d94ff;
+  }
+</style>
+
+<script>
+  // INTERAKTIV MENU NAVIGATION
+  // Find alle sektioner og links i menuen
+  const sektioner = document.querySelectorAll("section");
+  const links = document.querySelectorAll("nav a");
+
+  // Når man scroller på siden
+  window.onscroll = () => {
+    let aktivId = "";
+
+    // Find den sektion, man er nået til
+    sektioner.forEach((sektion) => {
+      if (window.scrollY >= sektion.offsetTop - 20) {
+        aktivId = sektion.id;
+      }
+    });
+
+    // Opdater linkene i menuen
+    links.forEach((link) => {
+      link.classList.remove("active"); // fjern aktive
+      if (link.classList.contains(aktivId)) {
+        link.classList.add("active"); // tilføj aktive
+      }
+    });
+  };
+</script>
