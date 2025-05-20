@@ -36,7 +36,7 @@ import vinyl from "../../public/images/vinyl.webp";
 
   <!-- ABOUT TOMMI'S (WHITE SECTION) -->
   <section class="grid md:grid-cols-2 gap-m lg:gap-xl p-m md:p-lg lg:p-3xl">
-    <div class="content-center order-2 md:order-none fadein">
+    <div class="content-center order-2 md:order-none fadeinDown sm:fadein">
       <h2 class="text-blue-500 mb-xs md:mb-sm">
         No Reservations.<br />
         No Rules.<br />
@@ -226,6 +226,16 @@ import vinyl from "../../public/images/vinyl.webp";
     fadein.classList.add(
       "animate__animated",
       "animate__fadeInRight",
+      "animate__slow"
+    );
+  });
+
+  const fadeinDown = document.querySelector(".fadeinDown");
+
+  inView(fadeinDown, () => {
+    fadeinDown.classList.add(
+      "animate__animated",
+      "animate__fadeInDown",
       "animate__slow"
     );
   });
