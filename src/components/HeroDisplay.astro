@@ -6,19 +6,12 @@ import { Image } from "astro:assets";
 import banner from "../../public/images/tommi_hero.webp";
 ---
 
-<div class="relative overflow-hidden z-30">
-  <!-- Højde på index: h-[calc(70vh-98px)] sm:h-[calc(100vh-98px)] -->
-  <!-- Højde på de andre sider: h-8xl -->
-  <div class={height}>
-    <Image
-      src={banner}
-      alt="Picture of two hands holding af juicy burger from Tommis Burger Joint"
-      class="w-full h-full object-cover object-[50%_45%]"
-    />
-  </div>
-  <h1
-    class="absolute bottom-0 left-[50%] translate-x-[-50%] w-full leading-[0.68] slideup"
-  >
+<div
+  class="relative overflow-hidden z-30 flex"
+  class:list={height}
+  style="background-image: url(/public/images/tommi_hero.webp); background-repeat: no-repeat; background-size: cover; background-position: center 42%;"
+>
+  <h1 class="w-full self-end leading-[0.68] slideup">
     {h1}
   </h1>
 </div>
