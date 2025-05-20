@@ -1,15 +1,12 @@
 ---
 // Henter parametrene fra Astro.props
 const { height = "", h1 = "" } = Astro.props;
-
-import { Image } from "astro:assets";
-import banner from "../../public/images/tommi_hero.webp";
 ---
 
 <div
   class="relative overflow-hidden z-30 flex"
   class:list={height}
-  style="background-image: url(/public/images/tommi_hero.webp); background-repeat: no-repeat; background-size: cover; background-position: center 42%;"
+  style="background-image: url(/images/tommi_hero.webp); background-repeat: no-repeat; background-size: cover; background-position: center 42%;"
 >
   <h1 class="w-full self-end leading-[0.68] slideup">
     {h1}
