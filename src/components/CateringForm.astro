@@ -406,23 +406,7 @@ import Button from "../components/Button.astro";
     appearance: auto;
   }
 
-  input[type="date"]:before {
-    color: rgba(53, 53, 53, 0.44);
-    content: attr(placeholder);
-  }
-
-  input[type="date"].full:before {
-    color: var(--color-black-500);
-    content: "" !important;
-  }
-
-  input[type="time"]:before {
-    color: rgba(53, 53, 53, 0.44);
-    content: attr(placeholder);
-  }
-
-  input[type="time"].full:before {
-    color: var(--color-black-500);
-    content: "" !important;
+  input[type="date"] {
+    -webkit-appearance: none;
   }
 </style>
