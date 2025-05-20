@@ -66,6 +66,7 @@ import vinyl from "../../public/images/vinyl.webp";
       src={burgerstack}
       alt="3 stacked burgers from Tommis Burger Joint"
       class="w-full h-full object-cover overflow-hidden relative"
+      loading="lazy"
     />
   </section>
 
@@ -130,12 +131,13 @@ import vinyl from "../../public/images/vinyl.webp";
             src={vinyl_img}
             alt="Happy people eating and drinking outside of Tommi's Burger Joint"
             class="w-[114px] sm:w-[155px] rounded-lg absolute top-[16px] sm:top-[24px] left-[16px] sm:left-[22px] z-auto"
+            loading="lazy"
           />
         </div>
         <div
           class="hidden sm:block absolute left-[350px] lg:left-[360px] w-[330px] lg:w-[420px] top-[50%] translate-y-[-50%] sm:fadein2"
         >
-          <Image src={vinyl} alt="Vinyl" class="rotate" />
+          <Image src={vinyl} alt="Vinyl" class="rotate" loading="lazy" />
         </div>
       </div>
     </div>

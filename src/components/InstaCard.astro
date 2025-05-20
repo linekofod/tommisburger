@@ -11,7 +11,12 @@ const {
 
 <div class="flex flex-col relative group">
   <!-- Insta image -->
-  <img src={cardimage} alt={cardimagealt} class="w-full h-full" />
+  <img
+    src={cardimage}
+    alt={cardimagealt}
+    loading="lazy"
+    class="w-full h-full"
+  />
 
   <!-- Hover overlay -->
   <a
