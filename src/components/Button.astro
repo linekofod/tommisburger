@@ -1,10 +1,5 @@
 ---
-const {
-  variant = "primary",
-  size = "large",
-  href = "#",
-  target = "_self",
-} = Astro.props;
+const { variant = "primary", href = "#", target = "_self" } = Astro.props;
 
 const buttonStyling =
   "font-roboto text-button uppercase font-medium w-fit h-fit inline-block transition-all ease-in-out duration-150";
@@ -16,15 +11,13 @@ const variantClasses = {
     "text-blue-500 border-1 border-blue-500 hover:text-neutral-50 hover:border-blue-500 hover:bg-blue-500",
 };
 
-const sizeClasses = {
-  large: "px-xs py-3xs",
-};
+const sizeClass = "px-xs py-3xs";
 ---
 
 <a
   href={href}
   target={target}
-  class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}
+  class:list={[buttonStyling, variantClasses[variant], sizeClass]}
 >
   <span><slot /></span>
 </a>
