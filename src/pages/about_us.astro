@@ -91,10 +91,10 @@ import about from "../../public/images/about_us.webp";
   import { inView, animate } from "motion";
 
   //   InView animation
-  const fadein = document.querySelector(".fadein");
+  const inviewelement = document.querySelector(".fadein");
 
-  inView(fadein, () => {
-    fadein.classList.add(
+  inView(inviewelement, () => {
+    inviewelement.classList.add(
       "animate__animated",
       "animate__fadeInLeft",
       "animate__slow"
