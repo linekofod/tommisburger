@@ -9,6 +9,7 @@ const {
   h3 = "",
   h4 = "",
   body = "",
+  buttontext = "",
   active = "false",
 } = Astro.props;
 
@@ -40,6 +41,6 @@ import Button from "./Button.astro";
         <p class="max-w-[40ch]">{body}</p>
       </div>
     </div>
-    <div class="mt-auto"><Button href={href}>Order now</Button></div>
+    <div class="mt-auto"><Button href={href}>{buttontext}</Button></div>
   </a>
 </div>

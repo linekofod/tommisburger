@@ -12,36 +12,42 @@ import HeroDisplay from "../components/HeroDisplay.astro";
   <HeroDisplay height="h-6xl sm:h-8xl" h1="Our Menu" />
   <div class="grid grid-cols-1 lg:grid-cols-[200px_1fr] mx-s lg:mx-ml">
     <!-- MENU NAVIGATION -->
-    <nav class="hidden lg:flex flex-col gap-3xs sticky top-xl self-start mt-xl">
-      <a
-        href="#combos"
-        class="combos uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
-        >Combos</a
-      >
-      <a
-        href="#burgers"
-        class="burgers uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
-        >Burgers</a
-      >
-      <a
-        href="#fries"
-        class="fries uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
-        >Fries</a
-      >
-      <a
-        href="#dips"
-        class="dips uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
-        >Dips</a
-      >
-      <a
-        href="#drinks"
-        class="drinks uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
-        >Drinks</a
-      >
-      <a
-        href="#desserts"
-        class="desserts uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
-        >Desserts</a
+    <nav class="hidden lg:flex flex-col gap-m sticky top-xl self-start mt-xl">
+      <div class="lg:flex flex-col gap-3xs">
+        <a
+          href="#combos"
+          class="combos uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
+          >Combos</a
+        >
+        <a
+          href="#burgers"
+          class="burgers uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
+          >Burgers</a
+        >
+        <a
+          href="#fries"
+          class="fries uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
+          >Fries</a
+        >
+        <a
+          href="#dips"
+          class="dips uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
+          >Dips</a
+        >
+        <a
+          href="#drinks"
+          class="drinks uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
+          >Drinks</a
+        >
+        <a
+          href="#desserts"
+          class="desserts uppercase font-roboto text-headline3 font-semibold transition-all w-fit hover:text-blue-500"
+          >Desserts</a
+        >
+      </div>
+      <Button
+        href="https://tommisdk.heapsgo.com/en/dnk/restaurants/tbj-k-dbyen/"
+        target="_blank">ORDER NOW</Button
       >
     </nav>
 
@@ -481,6 +487,17 @@ import HeroDisplay from "../components/HeroDisplay.astro";
           </div>
         </div>
       </section>
+
+      <!-- ORDER TAKEAWAY BUTTON ON MOBILE -->
+      <div
+        class="lg:hidden flex justify-end fixed bottom-0 left-3xs z-20 bg-neutral-50 p-sm w-full"
+      >
+        <Button
+          class="self-center"
+          href="https://tommisdk.heapsgo.com/en/dnk/restaurants/tbj-k-dbyen/"
+          target="_blank">ORDER NOW</Button
+        >
+      </div>
     </div>
   </div>
 </MainLayout>
